@@ -1,15 +1,45 @@
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%; }
+
+header {
+  height: 3em;
+  width: 100%;
+  background: blue; }
+  header h1 {
+    margin: 0; }
+
+.search {
+  display: flex;
+  width: 90%;
+  position: relative;
+  bottom: 250px;
+  justify-content: flex-end; }
+
 ul {
   list-style-type: none;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  position: fixed;
+  position: relative;
   height: 100%;
-  border: 1px solid red;
   left: 0;
   margin: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  background: purple;
+  width: 5%; }
   ul svg {
     width: 2em;
     margin: 1em; }
+
+.bar-chart {
+  justify-content: center; }
+  .bar-chart #myChart {
+    height: 5em !important;
+    width: 5em !important; }
 
 /*# sourceMappingURL=main.css.map */
