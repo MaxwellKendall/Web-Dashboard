@@ -1,45 +1,90 @@
-html {
-  height: 100%; }
+* {
+  box-sizing: border-box; }
 
-body {
+h1 {
+  font-size: 18px; }
+
+h2 {
+  font-size: 16.8px; }
+
+h3 {
+  font-size: 15.6px; }
+
+h4 {
+  font-size: 14.4px; }
+
+p, span {
+  font-size: 12px; }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px; }
+
+  h2 {
+    font-size: 24px; }
+
+  h3 {
+    font-size: 18px; }
+
+  h4 {
+    font-size: 14.4px; }
+
+  p, span {
+    font-size: 13.2px; } }
+h1,
+h2,
+h3,
+h4,
+span,
+p {
+  font-family: "Open Sans", sans-serif; }
+
+/************************************
+Body Styles
+*************************************/
+.container {
   margin: 0;
-  min-height: 100vh;
-  height: 100%;
-  width: 100%; }
+  padding: 0; }
+  .container a {
+    text-decoration: none; }
 
+/************************************
+ Header Styles
+*************************************/
 header {
-  height: 3em;
-  width: 100%;
-  background: blue; }
-  header h1 {
-    margin: 0; }
-
-.search {
   display: flex;
-  width: 90%;
-  position: relative;
-  bottom: 250px;
-  justify-content: flex-end; }
+  align-items: center;
+  flex-direction: row;
+  background: black;
+  justify-content: flex-start; }
+  header h1 {
+    margin-left: .5em;
+    color: white; }
+  header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px; }
+    header ul li {
+      list-style-type: none;
+      width: 2em;
+      text-align: center;
+      margin: 0 .5em;
+      height: 2em; }
+      header ul li img {
+        width: 100%;
+        height: 100%;
+        border-radius: 2em; }
+      header ul li span {
+        color: white; }
+    header ul .vertical-line {
+      height: 2.5em;
+      border-radius: 2em;
+      background: white;
+      width: .2em; }
 
-ul {
-  list-style-type: none;
-  display: inline-flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-  left: 0;
-  margin: 0;
-  padding-left: 0;
-  background: purple;
-  width: 5%; }
-  ul svg {
-    width: 2em;
-    margin: 1em; }
-
-.bar-chart {
-  justify-content: center; }
-  .bar-chart #myChart {
-    height: 5em !important;
-    width: 5em !important; }
+#bell-icon {
+  width: 100%;
+  margin: auto; }
 
 /*# sourceMappingURL=main.css.map */
