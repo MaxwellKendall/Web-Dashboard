@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,19 +15,27 @@ Body Styles
 .container {
     margin: 0;
     padding: 0;
+    position: relative;
+    .main {
+        height: 100%;
+    }
     a {
     text-decoration: none;
+    }
+    li {
+        list-style-type: none;
     }
 }
 
 /************************************
- Header Styles
+ Header Styles : "My Web Dashboard.."
 *************************************/
 
 header {
     display: flex;
     align-items: center;
     flex-direction: row;
+    height: 5.438em;
     background: black;
     justify-content: flex-start;
     @include media-query($tablet) {
@@ -80,3 +92,66 @@ header {
         @include media-query($tablet) {
         }
     }
+
+/**********************************************************************************
+Dashbaord & Alert: "Dashboard, search [       ]; alert...."
+***********************************************************************************/
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    h1 {
+        margin-left: .5em;
+    }
+    input[type="input"] {
+        margin-left: auto;
+        margin-right: .5em
+    }
+}
+.alert {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+/**********************************************************************************
+Navigation SVG's : "Members, Visits..." Blah Blah Blah!
+***********************************************************************************/
+
+.navigation {
+    background: orange;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 87px;
+    width: 8%;
+    height: 100%;
+    min-width: 80px;
+        ul {
+        display: flex;
+        padding-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        // min-width:
+    li {
+        width: 3em;
+        height: 3.2em;
+    svg {
+        width: 100%;
+        height: 100%;
+        }
+    }
+}
+}
+
+/********************************************************************************
+Footer
+***********************************************************************************/
+
+footer {
+    display: inline;
+}
