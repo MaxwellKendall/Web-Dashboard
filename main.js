@@ -5,7 +5,7 @@ var lineChart = new Chart(traffic, {
     data: {
         labels: ["S", "M", "T", "W", "TH", "F", "S"],
         datasets: [{
-            label: 'Daily Traffic',
+            label: 'Traffic',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -85,7 +85,7 @@ var pieChart = new Chart(mobileUsers, {
     data: {
         labels: ["S", "M", "T", "W", "TH", "F", "S"],
         datasets: [{
-            label: 'Daily Traffic',
+            label: 'Mobile Users',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

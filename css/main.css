@@ -50,11 +50,17 @@ Body Styles
   padding: 0;
   position: relative; }
   .container .main {
-    height: 100%; }
+    height: 100%;
+    width: 92%;
+    position: relative;
+    top: 0;
+    left: 8%;
+    border: 1px solid red; }
   .container a {
     text-decoration: none; }
   .container li {
-    list-style-type: none; }
+    list-style-type: none;
+    cursor: pointer; }
 
 /************************************
  Header Styles : "My Web Dashboard.."
@@ -117,22 +123,26 @@ Navigation SVG's : "Members, Visits..." Blah Blah Blah!
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   top: 87px;
   width: 8%;
   height: 100%;
-  min-width: 80px; }
+  min-width: 80px;
+  min-height: 100vh; }
   .navigation ul {
     display: flex;
     padding-left: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%; }
+    list-style-type: none;
+    width: 100%; }
     .navigation ul li {
-      width: 3em;
-      height: 3.2em; }
+      margin: 1em;
+      width: 65%;
+      padding: .75em;
+      height: 50%; }
       .navigation ul li svg {
         width: 100%;
         height: 100%; }
@@ -141,10 +151,26 @@ Navigation SVG's : "Members, Visits..." Blah Blah Blah!
 Footer
 ***********************************************************************************/
 footer {
-  display: inline; }
+  display: flex;
+  justify-content: center; }
 
 #bell-icon {
   width: 100%;
   margin: auto; }
+
+.lineChart {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid red; }
+
+.pieChart,
+.barChart {
+  width: 33% !important;
+  height: 50% !important;
+  border: 1px solid orange;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
