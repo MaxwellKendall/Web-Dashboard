@@ -2,16 +2,19 @@
     height: 60%;
     display: flex;
     justify-content: center;
-    border: 1px solid red;
 }
 
-
-.pieChart,
-.barChart {
-    width: 33% !important;
-    height: 50% !important;
-    border: 1px solid orange;
-    display: inline-flex;
+.smaller-graphs {
+    display: flex;
     justify-content: center;
-    align-items: center;
+
+    .pieChart,
+    .barChart {
+        width: 33% !important;
+        height: 50% !important;
+        border: 1px solid black;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

@@ -43,26 +43,6 @@ p {
   font-family: "Open Sans", sans-serif; }
 
 /************************************
-Body Styles
-*************************************/
-.container {
-  margin: 0;
-  padding: 0;
-  position: relative; }
-  .container .main {
-    height: 100%;
-    width: 92%;
-    position: relative;
-    top: 0;
-    left: 8%;
-    border: 1px solid red; }
-  .container a {
-    text-decoration: none; }
-  .container li {
-    list-style-type: none;
-    cursor: pointer; }
-
-/************************************
  Header Styles : "My Web Dashboard.."
 *************************************/
 header {
@@ -99,24 +79,7 @@ header {
       width: .2em; }
 
 /**********************************************************************************
-Dashbaord & Alert: "Dashboard, search [       ]; alert...."
-***********************************************************************************/
-.dashboard {
-  display: flex;
-  align-items: center; }
-  .dashboard h1 {
-    margin-left: .5em; }
-  .dashboard input[type="input"] {
-    margin-left: auto;
-    margin-right: 0.5em; }
-
-.alert {
-  display: block;
-  margin: auto;
-  text-align: center; }
-
-/**********************************************************************************
-Navigation SVG's : "Members, Visits..." Blah Blah Blah!
+    Navigation SVG's : "Members, Visits..." Blah Blah Blah!
 ***********************************************************************************/
 .navigation {
   background: orange;
@@ -126,9 +89,8 @@ Navigation SVG's : "Members, Visits..." Blah Blah Blah!
   justify-content: flex-start;
   align-items: center;
   top: 87px;
-  width: 8%;
+  width: 80px;
   height: 100%;
-  min-width: 80px;
   min-height: 100vh; }
   .navigation ul {
     display: flex;
@@ -137,15 +99,150 @@ Navigation SVG's : "Members, Visits..." Blah Blah Blah!
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    width: 100%; }
+    width: 100%;
+    min-width: 80px; }
     .navigation ul li {
       margin: 1em;
       width: 65%;
       padding: .75em;
       height: 50%; }
-      .navigation ul li svg {
-        width: 100%;
-        height: 100%; }
+      .navigation ul li img {
+        width: 100%; }
+
+/**********************************************************************************
+Dashbaord & Alert: "Dashboard, search [       ]; alert...."
+***********************************************************************************/
+.dashboard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: lightgray; }
+  .dashboard h1 {
+    padding: .5em;
+    margin: 0;
+    background: white;
+    border-right: 1px solid black; }
+  .dashboard .search {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+    justify-content: flex-end; }
+  .dashboard input[type=input] {
+    border: 1px solid black;
+    width: 35%;
+    height: 45%;
+    border-radius: 5px; }
+
+.alert {
+  display: flex;
+  margin: 5px auto;
+  text-align: center;
+  background: orange;
+  width: 90%;
+  border-radius: 5px;
+  justify-content: space-between;
+  padding: 9px;
+  color: white; }
+
+.alert span:nth-child(1),
+span:nth-child(3) {
+  font-weight: bold;
+  font-size: 15px; }
+
+.alert span:nth-child(3) {
+  margin-right: 3px; }
+
+/**********************************************************************************
+Charts
+***********************************************************************************/
+.traffic {
+  display: flex;
+  justify-content: flex-end; }
+  .traffic h2 {
+    margin-right: auto;
+    margin-left: 15px; }
+  .traffic ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 0;
+    margin-right: 15px; }
+    .traffic ul li {
+      margin: 5px; }
+      .traffic ul li button {
+        border: none;
+        background: orange;
+        border-radius: 25px;
+        width: 75px;
+        color: white; }
+
+/*******************************************************************************
+Body Styles
+*********************************************************************************/
+.container {
+  margin: 0;
+  padding: 0;
+  position: relative; }
+  .container .main {
+    margin-left: 80px;
+    border: 1px solid red; }
+  .container a {
+    text-decoration: none; }
+  .container li {
+    list-style-type: none;
+    cursor: pointer; }
+  .container .social-media {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column; }
+    .container .social-media .stats {
+      display: flex;
+      width: 100%; }
+    .container .social-media .svg-container {
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      width: 25%;
+      border-radius: 300px; }
+      .container .social-media .svg-container img {
+        width: 50px; }
+    .container .social-media .google,
+    .container .social-media .facebook,
+    .container .social-media .twitter {
+      background: lightgray;
+      width: 33%;
+      display: flex;
+      margin: 0 8px 4px 0;
+      align-items: center;
+      border: 1px solid black;
+      padding: 20px;
+      border-radius: 10px; }
+
+/********************************************************************************
+New Members, Recent Activitiy "Secondary-main"
+***********************************************************************************/
+.secondary-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0; }
+  .secondary-main .recent-activity {
+    width: 45%;
+    margin-left: 5px; }
+  .secondary-main .new-memebers {
+    width: 45%;
+    margin-right: 5px; }
+  .secondary-main li {
+    width: 100%;
+    border: 1px solid red;
+    display: block;
+    height: 50px; }
 
 /********************************************************************************
 Footer
@@ -154,23 +251,25 @@ footer {
   display: flex;
   justify-content: center; }
 
-#bell-icon {
+svg #bell-icon {
   width: 100%;
   margin: auto; }
 
 .lineChart {
   height: 60%;
   display: flex;
-  justify-content: center;
-  border: 1px solid red; }
+  justify-content: center; }
 
-.pieChart,
-.barChart {
-  width: 33% !important;
-  height: 50% !important;
-  border: 1px solid orange;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center; }
+.smaller-graphs {
+  display: flex;
+  justify-content: center; }
+  .smaller-graphs .pieChart,
+  .smaller-graphs .barChart {
+    width: 33% !important;
+    height: 50% !important;
+    border: 1px solid black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
