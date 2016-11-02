@@ -50,10 +50,12 @@
         </div>
         <div class="main">
             <div class="dashboard">
-                <h1>Dashboard</h1>
+                <div class="dashboard-header">
+                    <h1>Dashboard</h1>
+                </div>
                 <div class="search">
                 <!-- This needs to be taking up the full container with a background -->
-                    <input type="input" placeholder="search">
+                    <input type="input" placeholder="search" placeholder=&#128269>
                 </div>
                 </div>
                 <div class="alert">
@@ -73,10 +75,16 @@
             </div>
             <div class="smaller-graphs">
                 <div class="barChart">
-                    <canvas id="bar"></canvas>
+                    <div class="graph-header">
+                        <h2>Daily Traffic</h2>
+                    </div>
+                        <canvas id="bar"></canvas>
                 </div>
                 <div class="pieChart">
-                    <canvas id="pie"></canvas>
+                    <div class="graph-header">
+                        <h2>Mobile Users</h2>
+                    </div>
+                        <canvas id="pie"></canvas>
                 </div>
             </div>
             <div class="social-media">
@@ -112,51 +120,143 @@
             </div>
         </div>
         <div class="secondary-main">
-            <div class="new-memebers">
+            <div class="new-members">
                 <h2>New Members</h2>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
+                    <ul class="member">
+                        <li>
+                            <a href=""><img src="rose.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <span>This is my Name</span>
+                            <span>klasjdflk@gmail.com</span>
+                        </li>
+                        <li><span>09/11/2001</span></li>
+                    </ul>
+                    <ul class="member">
+                        <li>
+                            <a href=""><img src="rose.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <span>This is my Name</span>
+                            <span>klasjdflk@gmail.com</span>
+                        </li>
+                        <li><span>09/11/2001</span></li>
+                    </ul>
+                    <ul class="member">
+                        <li>
+                            <a href=""><img src="rose.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <span>This is my Name</span>
+                            <span>klasjdflk@gmail.com</span>
+                        </li>
+                        <li><span>09/11/2001</span></li>
+                    </ul>
+                    <ul class="member">
+                        <li>
+                            <a href=""><img src="rose.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <span>This is my Name</span>
+                            <span>klasjdflk@gmail.com</span>
+                        </li>
+                        <li><span>09/11/2001</span></li>
+                    </ul>
+                    <ul class="member">
+                        <li>
+                            <a href=""><img src="rose.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <span>This is my Name</span>
+                            <span>klasjdflk@gmail.com</span>
+                        </li>
+                        <li><span>09/11/2001</span></li>
+                    </ul>
             </div>
             <div class="recent-activity">
                 <h2>Recent Activity</h2>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
-                <li><a href="#"><div class=""><span></span></div></a></li>
+                <ul class="member-activity">
+                    <li>
+                        <a href=""><img src="rose.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <span>Lorem ipsum dolor</span>
+                        <span>5 minutes ago</span>
+                    </li>
+                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
+                </ul>
+                <ul class="member-activity">
+                    <li>
+                        <a href=""><img src="rose.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <span>Lorem ipsum dolor</span>
+                        <span>10 minutes ago</span>
+                    </li>
+                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
+                </ul>
+                <ul class="member-activity">
+                    <li>
+                        <a href=""><img src="rose.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <span>Lorem ipsum dolor</span>
+                        <span>1 hour ago</span>
+                    </li>
+                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
+                </ul>
+                <ul class="member-activity">
+                    <li>
+                        <a href=""><img src="rose.jpg" alt="" /></a>
+                    </li>
+                    <li><span><a href="#">This is my name</a></span></li>
+                    <li>
+                        <span>TLorem ipsum dolor</span>
+                        <span>1 day ago</span>
+                    </li>
+                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
+                </ul>
+                <ul class="member-activity">
+                    <li>
+                        <a href=""><img src="rose.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <span>Lorem ipsum dolor</span>
+                        <span>1 week ago</span>
+                    </li>
+                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
+                </ul>
             </div>
         </div>
         <div class="tertiary-main">
             <div class="message-user">
                 <h2>Message User</h2>
-                <textarea name="Message-User"></textarea>
-                <textarea name="Message-to-User"></textarea>
-                <button type="button">Send</button>
+                    <form class="form1" action="index.html" method="post">
+                        <input type="text" placeholder="Search for User" />
+                        <textarea name="Message-to-User" placeholder="Message for User"></textarea>
+                        <button type="button">Send</button>
+                    </form>
             </div>
             <div class="settings">
-                <label for="email"></label>
-                <span>Send Email Notifications</span>
-                    <button type="checkbox"></button>
-                <span>Set Profile to Public</span>
-                    <button type="checkbox"></button>
-                <select id="xyz" name="">
-                    <option value selected>Select a Time Zone</option>
-                    <option>Central</option>
-                    <option>Pacific</option>
-                    <option>Mountain</option>
-                    <option>Eastern</option>
-                </select>
-                <button type="button">Save</button>
-                <button type="button">Cancel</button>
+                <h2>Settings</h2>
+                    <form class="form2" action="index.html" method="post">
+                        <label for="notifications">Send Email Notifications</label>
+                            <button type="checkbox" id="notifications"></button>
+                        <label for="privacy">Set Profile to Public</label>
+                            <button id="privacy"type="checkbox"></button>
+                        <select id="xyz" name="">
+                            <option value selected>Select a Time Zone</option>
+                            <option>Central</option>
+                            <option>Pacific</option>
+                            <option>Mountain</option>
+                            <option>Eastern</option>
+                        </select>
+                        <button type="button">Save</button>
+                        <button type="button">Cancel</button>
+                    </form>
             </div>
         </div><!-- End of Secondary Main-->
         </div><!-- End of Main Area-->
-    <footer>
-        <p>Copyright Maxwell Kendall, 2016</p>
-    </footer>
     </div><!--///Main Container for Body Content///-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>

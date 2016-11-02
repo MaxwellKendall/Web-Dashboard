@@ -1,9 +1,6 @@
-html {
-  height: 100%; }
-
-* {
-  box-sizing: border-box; }
-
+/************************************
+Mixin Standards
+*************************************/
 h1 {
   font-size: 18px; }
 
@@ -19,21 +16,6 @@ h4 {
 p, span {
   font-size: 12px; }
 
-@media (min-width: 768px) {
-  h1 {
-    font-size: 36px; }
-
-  h2 {
-    font-size: 24px; }
-
-  h3 {
-    font-size: 18px; }
-
-  h4 {
-    font-size: 14.4px; }
-
-  p, span {
-    font-size: 13.2px; } }
 h1,
 h2,
 h3,
@@ -41,6 +23,28 @@ h4,
 span,
 p {
   font-family: "Open Sans", sans-serif; }
+
+* {
+  box-sizing: border-box; }
+
+#bell-icon {
+  width: 100%;
+  margin: auto; }
+
+/*******************************************************************************
+Body Styles
+*********************************************************************************/
+.container {
+  margin: 0;
+  padding: 0;
+  position: relative; }
+  .container .main {
+    margin-left: 80px; }
+  .container a {
+    text-decoration: none; }
+  .container li {
+    list-style-type: none;
+    cursor: pointer; }
 
 /************************************
  Header Styles : "My Web Dashboard.."
@@ -117,11 +121,17 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
   justify-content: flex-start;
   align-items: center;
   background: lightgray; }
-  .dashboard h1 {
-    padding: .5em;
-    margin: 0;
+  .dashboard .dashboard-header {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
     background: white;
     border-right: 1px solid black; }
+  .dashboard h1 {
+    padding: .5em;
+    margin: 0; }
   .dashboard .search {
     height: 85px;
     display: flex;
@@ -134,7 +144,15 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
     border: 1px solid black;
     width: 35%;
     height: 45%;
-    border-radius: 5px; }
+    border-radius: 5px;
+    margin-right: 10px; }
+
+input[type=input]::-webkit-input-placeholder {
+  color: orange;
+  padding-left: 2.5%; }
+
+input[type=input]:focus {
+  text-indent: 2.5%; }
 
 .alert {
   display: flex;
@@ -155,6 +173,94 @@ span:nth-child(3) {
 .alert span:nth-child(3) {
   margin-right: 3px; }
 
+/********************************************************************************
+New Members, Recent Activitiy "Secondary-main"
+***********************************************************************************/
+.secondary-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black; }
+
+.new-members {
+  width: 45%;
+  flex-direction: column;
+  padding: 2.5% 0 0 0;
+  border-right: 1px solid black; }
+  .new-members .member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 12px;
+    border-bottom: solid black; }
+    .new-members .member li {
+      display: flex; }
+    .new-members .member a {
+      display: flex;
+      align-items: center; }
+    .new-members .member img {
+      width: 35px;
+      border-radius: 25px; }
+
+.member li:nth-of-type(3) {
+  margin-left: auto; }
+
+.member li:nth-child(2) {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column; }
+
+.recent-activity {
+  width: 45%;
+  padding: 2.5% 0 0 0; }
+  .recent-activity ul.member-activity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    padding-bottom: 12px;
+    border-bottom: solid black; }
+  .recent-activity .member-activity img {
+    width: 35px;
+    border-radius: 25px; }
+
+.recent-activity li:nth-of-type(3) {
+  margin-left: auto; }
+
+.recent-activity li:nth-child(2) {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column; }
+
+/********************************************************************************
+Tertiary Main
+***********************************************************************************/
+.tertiary-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .tertiary-main .message-user,
+  .tertiary-main .settings {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 0 2.5%;
+    align-items: center;
+    justify-content: flex-start; }
+    .tertiary-main .message-user h2,
+    .tertiary-main .settings h2 {
+      align-self: flex-start; }
+  .tertiary-main .form1,
+  .tertiary-main .form2 {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column; }
+
 /**********************************************************************************
 Charts
 ***********************************************************************************/
@@ -172,88 +278,12 @@ Charts
     margin-right: 15px; }
     .traffic ul li {
       margin: 5px; }
-      .traffic ul li button {
-        border: none;
-        background: orange;
-        border-radius: 25px;
-        width: 75px;
-        color: white; }
-
-/*******************************************************************************
-Body Styles
-*********************************************************************************/
-.container {
-  margin: 0;
-  padding: 0;
-  position: relative; }
-  .container .main {
-    margin-left: 80px;
-    border: 1px solid red; }
-  .container a {
-    text-decoration: none; }
-  .container li {
-    list-style-type: none;
-    cursor: pointer; }
-  .container .social-media {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column; }
-    .container .social-media .stats {
-      display: flex;
-      width: 100%; }
-    .container .social-media .svg-container {
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px;
-      width: 25%;
-      border-radius: 300px; }
-      .container .social-media .svg-container img {
-        width: 50px; }
-    .container .social-media .google,
-    .container .social-media .facebook,
-    .container .social-media .twitter {
-      background: lightgray;
-      width: 33%;
-      display: flex;
-      margin: 0 8px 4px 0;
-      align-items: center;
-      border: 1px solid black;
-      padding: 20px;
-      border-radius: 10px; }
-
-/********************************************************************************
-New Members, Recent Activitiy "Secondary-main"
-***********************************************************************************/
-.secondary-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0; }
-  .secondary-main .recent-activity {
-    width: 45%;
-    margin-left: 5px; }
-  .secondary-main .new-memebers {
-    width: 45%;
-    margin-right: 5px; }
-  .secondary-main li {
-    width: 100%;
-    border: 1px solid red;
-    display: block;
-    height: 50px; }
-
-/********************************************************************************
-Footer
-***********************************************************************************/
-footer {
-  display: flex;
-  justify-content: center; }
-
-svg #bell-icon {
-  width: 100%;
-  margin: auto; }
+    .traffic ul button {
+      border: none;
+      background: orange;
+      border-radius: 25px;
+      width: 75px;
+      color: white; }
 
 .lineChart {
   height: 60%;
@@ -262,14 +292,82 @@ svg #bell-icon {
 
 .smaller-graphs {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
   .smaller-graphs .pieChart,
   .smaller-graphs .barChart {
-    width: 33% !important;
-    height: 50% !important;
-    border: 1px solid black;
-    display: inline-flex;
+    width: 50% !important;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 20px;
     align-items: center; }
+  .smaller-graphs .barChart {
+    border-right: .5px solid black; }
+  .smaller-graphs .graph-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; }
+
+/**********************************************************************************
+Charts
+***********************************************************************************/
+.social-media {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 45px;
+  border-bottom: 1px solid black; }
+  .social-media h2 {
+    margin-left: 2.5em; }
+  .social-media .stats {
+    display: flex;
+    width: 100%;
+    padding: 0 2.5em; }
+  .social-media .google,
+  .social-media .facebook,
+  .social-media .twitter {
+    background: black;
+    width: 33%;
+    display: flex;
+    margin: 0 45px 0px 0;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px; }
+    .social-media .google .google,
+    .social-media .facebook .google,
+    .social-media .twitter .google {
+      margin-right: 0; }
+    .social-media .google .svg-container,
+    .social-media .facebook .svg-container,
+    .social-media .twitter .svg-container {
+      background: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      width: 25%;
+      border-radius: 50%; }
+      .social-media .google .svg-container img,
+      .social-media .facebook .svg-container img,
+      .social-media .twitter .svg-container img {
+        width: 50px; }
+  .social-media ul {
+    margin-left: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .social-media li {
+    color: white; }
+
+li:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 20px; }
+
+li:nth-of-type(2) {
+  font-weight: normal;
+  font-size: 40px; }
 
 /*# sourceMappingURL=main.css.map */
