@@ -196,7 +196,8 @@ New Members, Recent Activitiy "Secondary-main"
     padding-bottom: 12px;
     border-bottom: solid black; }
     .new-members .member li {
-      display: flex; }
+      display: flex;
+      height: 35px; }
     .new-members .member a {
       display: flex;
       align-items: center; }
@@ -223,6 +224,8 @@ New Members, Recent Activitiy "Secondary-main"
     padding: 0;
     padding-bottom: 12px;
     border-bottom: solid black; }
+    .recent-activity ul.member-activity li {
+      height: 35px; }
   .recent-activity .member-activity img {
     width: 35px;
     border-radius: 25px; }
