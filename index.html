@@ -241,10 +241,22 @@
                 <h2>Settings</h2>
                     <form class="form2" action="index.html" method="post">
                         <label for="notifications">Send Email Notifications</label>
-                            <button type="checkbox" id="notifications"></button>
+                            <input type="checkbox" id="notifications"></input>
+                            <div class="toggleswitch">
+                                <label for="notifications">
+                                    <span class="innerswitch"></span>
+                                    <span class="inner"></span>
+                                </label>
+                            </div>
                         <label for="privacy">Set Profile to Public</label>
-                            <button id="privacy"type="checkbox"></button>
-                        <select id="xyz" name="">
+                            <input id="privacy" type="checkbox"></input>
+                            <div class="toggleswitch">
+                                <label for="privacy">
+                                    <span class="innerswitch"></span>
+                                    <span class="inner"></span>
+                                </label>
+                            </div>
+                        <select id="xyz" name=""><span><img src="icons/downarrow.svg" alt="" /></span>
                             <option value selected>Select a Time Zone</option>
                             <option>Central</option>
                             <option>Pacific</option>
