@@ -289,27 +289,72 @@ Tertiary Main
     margin-top: 1em; }
 
 .form2 label {
-  width: 40%;
-  display: block; }
-.form2 input#notifications,
-.form2 input#privacy {
-  display: none; }
-.form2 .toggleswitch {
   width: 33%;
   border: 1px solid orange;
-  height: 50px;
+  height: 40px;
   display: flex;
   background: orange;
   border-radius: 35px;
   align-items: center;
   justify-content: center; }
-.form2 span.innerswitch {
-  border: 1px solid black;
-  width: 20px;
+.form2 input#notifications,
+.form2 input#privacy {
+  display: none; }
+.form2 .toggleswitch {
+  position: relative;
+  width: 90px; }
+.form2 .toggleswitch:hover {
+  cursor: pointer; }
+.form2 input#notifications:checked + .checkbox-label .innerswitch,
+.form2 input#privacy:checked + .checkbox-label .innerswitch {
+  margin-left: -100%;
+  background: white; }
+.form2 input#notifications:checked + .checkbox-label .switch,
+.form2 input#privacy:checked + .checkbox-label .switch {
+  left: 5px;
+  right: 0px; }
+.form2 .checkbox-label {
+  width: 100%;
+  border: 1px solid orange;
+  height: 40px;
   display: block;
-  height: 35px;
-  border-radius: 40px;
-  line-height: 10px; }
+  background: orange;
+  border-radius: 35px;
+  overflow: hidden; }
+.form2 .innerswitch {
+  display: flex;
+  align-items: center;
+  width: 200%;
+  height: 100%;
+  justify-content: space-around; }
+.form2 .switch {
+  width: 18px;
+  height: 18px;
+  border: 3px solid orange;
+  display: block;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  margin-right: 5px;
+  position: absolute;
+  top: 11px;
+  right: 5px; }
+
+span.innerswitch:after,
+span.innerswitch:before {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13.5px; }
+
+span.innerswitch:before {
+  content: "ON";
+  padding-right: 25%; }
+
+span.innerswitch:after {
+  content: "OFF";
+  padding-left: 25%; }
 
 /**********************************************************************************
 Charts
