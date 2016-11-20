@@ -10,17 +10,10 @@
         <header>
             <h1>My Web Dashboard</h1>
             <ul>
-                <li>
-                    <img src="icons/icon-bell.svg" alt="" />
-                </li>
-                <div class="vertical-line">
-                </div>
-                <li>
-                    <a href="#"><img src="rose.jpg" alt="This is the Profile Picture"/></a>
-                </li>
-                <li>
-                    <a href="#"><span>Maxwell Kendall</span></a>
-                </li>
+                <li><img src="icons/icon-bell.svg" alt="" /><div class="alert-icon"></div></li>
+                <li><div class="vertical-line"></div></li>
+                <li><a href="#"><img src="rose.jpg" alt="This is the Profile Picture"/></a></li>
+                <li><a href="#"><span>Maxwell Kendall</span></a></li>
             </ul>
         </header>
         <!-- Beginning of Navigation on left hand side -->
@@ -55,7 +48,7 @@
                 </div>
                 <div class="search">
                 <!-- This needs to be taking up the full container with a background -->
-                    <input type="input" placeholder="search" placeholder=&#128269>
+                    <input type="text" placeholder="Search">
                 </div>
                 </div>
                 <div class="alert">
@@ -180,27 +173,7 @@
                         <a href=""><img src="rose.jpg" alt="" /></a>
                     </li>
                     <li>
-                        <span>Lorem ipsum dolor</span>
-                        <span>5 minutes ago</span>
-                    </li>
-                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
-                </ul>
-                <ul class="member-activity">
-                    <li>
-                        <a href=""><img src="rose.jpg" alt="" /></a>
-                    </li>
-                    <li>
-                        <span>Lorem ipsum dolor</span>
-                        <span>10 minutes ago</span>
-                    </li>
-                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
-                </ul>
-                <ul class="member-activity">
-                    <li>
-                        <a href=""><img src="rose.jpg" alt="" /></a>
-                    </li>
-                    <li>
-                        <span>Lorem ipsum dolor</span>
+                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
                         <span>1 hour ago</span>
                     </li>
                     <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
@@ -209,10 +182,9 @@
                     <li>
                         <a href=""><img src="rose.jpg" alt="" /></a>
                     </li>
-                    <li><span><a href="#">This is my name</a></span></li>
                     <li>
-                        <span>TLorem ipsum dolor</span>
-                        <span>1 day ago</span>
+                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <span>1 hour ago</span>
                     </li>
                     <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
                 </ul>
@@ -221,8 +193,28 @@
                         <a href=""><img src="rose.jpg" alt="" /></a>
                     </li>
                     <li>
-                        <span>Lorem ipsum dolor</span>
-                        <span>1 week ago</span>
+                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <span>1 hour ago</span>
+                    </li>
+                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
+                </ul>
+                <ul class="member-activity">
+                    <li>
+                        <a href=""><img src="rose.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <span>1 hour ago</span>
+                    </li>
+                    <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
+                </ul>
+                <ul class="member-activity">
+                    <li>
+                        <a href=""><img src="rose.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <span>1 hour ago</span>
                     </li>
                     <li><img class="arrow" src="icons/rightarrow.svg" alt=""/></li>
                 </ul>
@@ -240,21 +232,25 @@
             <div class="settings">
                 <h2>Settings</h2>
                     <form class="form2" action="index.html" method="post">
-                        <h3>Send Email Notifications</h3>
-                            <div class="toggleswitch">
-                                <input type="checkbox" id="notifications"></input>
-                                    <label class="checkbox-label" for="notifications">
-                                            <span class="innerswitch"></span>
-                                            <span class="switch"></span>
-                                    </label>
+                        <div class="row">
+                            <h3>Send Email Notifications</h3>
+                                <div class="toggleswitch">
+                                    <input type="checkbox" id="notifications"></input>
+                                        <label class="checkbox-label" for="notifications">
+                                                <span class="innerswitch"></span>
+                                                <span class="switch"></span>
+                                        </label>
+                                </div>
                             </div>
-                        <h3>Set Profile to Public</h3>
-                            <div class="toggleswitch">
-                                <input id="privacy" type="checkbox"></input>
-                                    <label class="checkbox-label" for="privacy">
-                                            <span class="innerswitch"></span>
-                                            <span class="switch"></span>
-                                    </label>
+                            <div class="row">
+                                <h3>Set Profile to Public</h3>
+                                    <div class="toggleswitch">
+                                        <input id="privacy" type="checkbox"></input>
+                                            <label class="checkbox-label" for="privacy">
+                                                    <span class="innerswitch"></span>
+                                                    <span class="switch"></span>
+                                            </label>
+                                    </div>
                             </div>
                         <select id="xyz" name=""><span><img src="icons/downarrow.svg" alt="" /></span>
                             <option value selected>Select a Time Zone</option>

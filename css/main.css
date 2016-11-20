@@ -63,13 +63,22 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-left: 20px; }
+    padding-left: 20px;
+    margin-left: calc(100% - 400px); }
     header ul li {
       list-style-type: none;
-      width: 40px;
+      width: 30px;
       text-align: center;
       margin: 0 .5em;
-      height: 40px; }
+      height: 30px; }
+      header ul li .alert-icon {
+        width: 10px;
+        height: 10px;
+        background: orange;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 22.4px;
+        right: -4px; }
       header ul li img {
         width: 100%;
         height: 100%;
@@ -77,10 +86,16 @@ header {
       header ul li span {
         color: white; }
     header ul .vertical-line {
-      height: 2.5em;
+      height: 100%;
       border-radius: 2em;
-      background: white;
-      width: .2em; }
+      background: white; }
+
+header li:nth-of-type(2) {
+  width: 2.5px;
+  height: 30px; }
+
+header li:nth-of-type(1) {
+  position: relative; }
 
 /**********************************************************************************
     Navigation SVG's : "Members, Visits..." Blah Blah Blah!
@@ -125,41 +140,48 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
   align-items: center;
   background: lightgray; }
   .dashboard .dashboard-header {
-    width: 15%;
+    width: calc(100% / 12 * 1.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85px;
     background: white;
-    border-right: 1px solid black; }
+    border-right: 1px solid #dbdbdb;
+    padding: 0 100px; }
   .dashboard h1 {
     padding: .5em;
-    margin: 0; }
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold; }
   .dashboard .search {
-    height: 85px;
+    height: 59px;
     display: flex;
     align-items: center;
     margin-right: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #dbdbdb;
     width: 100%;
-    justify-content: flex-end; }
-  .dashboard input[type=input] {
-    border: 1px solid black;
+    justify-content: flex-end;
+    background: #f6f6f6; }
+  .dashboard input[type=text] {
+    border: 1px solid #dbdbdb;
     width: 35%;
     height: 45%;
     border-radius: 5px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    background: url(../icons/search.svg) no-repeat calc(100% - 5px) 50%;
+    background-size: 15px;
+    background-color: white; }
 
-input[type=input]::-webkit-input-placeholder {
-  color: orange;
-  padding-left: 2.5%; }
+input[type=text]::-webkit-input-placeholder {
+  color: #d3d3d3;
+  padding-left: 2.5%;
+  font-size: 10px; }
 
-input[type=input]:focus {
+input[type=text]:focus {
   text-indent: 2.5%; }
 
 .alert {
   display: flex;
-  margin: 5px auto;
+  margin: 15px auto;
   text-align: center;
   background: orange;
   width: 90%;
@@ -229,6 +251,8 @@ New Members, Recent Activitiy "Secondary-main"
     border-bottom: solid black; }
     .recent-activity ul.member-activity li {
       height: 35px; }
+    .recent-activity ul.member-activity p {
+      margin: 0; }
   .recent-activity .member-activity img {
     width: 35px;
     border-radius: 25px; }
@@ -270,75 +294,94 @@ Tertiary Main
   .tertiary-main .form2 {
     align-self: flex-start;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     width: 100%;
-    height: 100%; }
-  .tertiary-main .form1 input[type="text"] {
-    height: 20%;
-    border: 1px solid black;
-    border-radius: 5px; }
-  .tertiary-main .form1 textarea {
-    height: 60%;
-    margin-top: 1em;
-    border-radius: 5px; }
-  .tertiary-main .form1 button {
-    height: 40px;
-    background: orange;
-    border-radius: 5px;
-    border: none;
-    margin-top: 1em; }
+    height: 100%;
+    flex-wrap: wrap; }
 
-.form2 label {
-  width: 33%;
-  border: 1px solid orange;
+.form1 input[type="text"] {
+  height: 20%;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px; }
+.form1 textarea {
+  height: 60%;
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 5px; }
+.form1 button {
   height: 40px;
-  display: flex;
+  width: 100%;
+  margin-top: 10px;
   background: orange;
-  border-radius: 35px;
+  border-radius: 5px;
+  border: none; }
+
+.form2 .toggleswitch {
+  position: relative;
+  width: 15%; }
+  .form2 .toggleswitch .checkbox-label {
+    width: 100%;
+    border: 1px solid orange;
+    height: 40px;
+    display: block;
+    background: orange;
+    border-radius: 35px;
+    overflow: hidden; }
+  .form2 .toggleswitch .innerswitch {
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: 100%;
+    justify-content: space-around; }
+  .form2 .toggleswitch .switch {
+    width: 18px;
+    height: 18px;
+    border: 3px solid orange;
+    display: block;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    margin-right: 5px;
+    position: absolute;
+    top: 11px;
+    right: 5px; }
+.form2 .row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center; }
+  .form2 .row h3 {
+    margin-right: auto; }
+.form2 button {
+  height: 35%;
+  width: 45%;
+  margin: 10px; }
+.form2 select {
+  margin: auto;
+  display: block;
+  width: 95%;
+  height: calc(100% / 12 * 2 );
+  -webkit-appearance: none;
+  background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) lightgray; }
 .form2 input#notifications,
 .form2 input#privacy {
   display: none; }
-.form2 .toggleswitch {
-  position: relative;
-  width: 90px; }
-.form2 .toggleswitch:hover {
+
+.toggleswitch:hover {
   cursor: pointer; }
-.form2 input#notifications:checked + .checkbox-label .innerswitch,
-.form2 input#privacy:checked + .checkbox-label .innerswitch {
+
+input#notifications:checked + .checkbox-label .innerswitch,
+input#privacy:checked + .checkbox-label .innerswitch {
   margin-left: -100%;
   background: white; }
-.form2 input#notifications:checked + .checkbox-label .switch,
-.form2 input#privacy:checked + .checkbox-label .switch {
+
+input#notifications:checked + .checkbox-label .switch,
+input#privacy:checked + .checkbox-label .switch {
   left: 5px;
   right: 0px; }
-.form2 .checkbox-label {
-  width: 100%;
-  border: 1px solid orange;
-  height: 40px;
-  display: block;
-  background: orange;
-  border-radius: 35px;
-  overflow: hidden; }
-.form2 .innerswitch {
-  display: flex;
-  align-items: center;
-  width: 200%;
-  height: 100%;
-  justify-content: space-around; }
-.form2 .switch {
-  width: 18px;
-  height: 18px;
-  border: 3px solid orange;
-  display: block;
-  border-radius: 20px;
-  background: white;
-  cursor: pointer;
-  margin-right: 5px;
-  position: absolute;
-  top: 11px;
-  right: 5px; }
 
 span.innerswitch:after,
 span.innerswitch:before {
@@ -355,6 +398,14 @@ span.innerswitch:before {
 span.innerswitch:after {
   content: "OFF";
   padding-left: 25%; }
+
+input[type="text"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  text-indent: .5em; }
+
+input[type="text"]:focus,
+textarea:focus {
+  text-indent: .5em; }
 
 /**********************************************************************************
 Charts
