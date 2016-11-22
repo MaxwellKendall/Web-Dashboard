@@ -203,16 +203,22 @@ New Members, Recent Activitiy "Secondary-main"
 ***********************************************************************************/
 .secondary-main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid black; }
+  @media (min-width: 768px) {
+    .secondary-main {
+      flex-direction: row; } }
 
 .new-members {
-  width: 45%;
+  width: 100%;
   flex-direction: column;
-  padding: 2.5% 2.5% 0 0;
-  border-right: 1px solid black; }
+  padding: 2.5% 2.5% 0 0; }
+  @media (min-width: 768px) {
+    .new-members {
+      border-right: 1px solid black;
+      width: 45%; } }
   .new-members .member {
     display: flex;
     flex-direction: row;
@@ -239,8 +245,11 @@ New Members, Recent Activitiy "Secondary-main"
   flex-direction: column; }
 
 .recent-activity {
-  width: 45%;
+  width: 100%;
   padding: 2.5% 0 0 2.5%; }
+  @media (min-width: 768px) {
+    .recent-activity {
+      width: 45%; } }
   .recent-activity ul.member-activity {
     display: flex;
     flex-direction: row;
@@ -274,19 +283,26 @@ Tertiary Main
 ***********************************************************************************/
 .tertiary-main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px; }
+  height: 350px; }
+  @media (min-width: 768px) {
+    .tertiary-main {
+      flex-direction: row; } }
   .tertiary-main .message-user,
   .tertiary-main .settings {
     height: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    width: 45%;
     padding: 0 2.5%;
     align-items: center;
     justify-content: flex-start; }
+    @media (min-width: 768px) {
+      .tertiary-main .message-user,
+      .tertiary-main .settings {
+        width: 45%; } }
     .tertiary-main .message-user h2,
     .tertiary-main .settings h2 {
       align-self: flex-start; }
@@ -310,7 +326,7 @@ Tertiary Main
   width: 100%;
   margin-top: 1em;
   border-radius: 5px; }
-.form1 button {
+.form1 input[type=submit] {
   height: 40px;
   width: 100%;
   margin-top: 10px;
@@ -318,35 +334,6 @@ Tertiary Main
   border-radius: 5px;
   border: none; }
 
-.form2 .toggleswitch {
-  position: relative;
-  width: 15%; }
-  .form2 .toggleswitch .checkbox-label {
-    width: 100%;
-    border: 1px solid orange;
-    height: 40px;
-    display: block;
-    background: orange;
-    border-radius: 35px;
-    overflow: hidden; }
-  .form2 .toggleswitch .innerswitch {
-    display: flex;
-    align-items: center;
-    width: 200%;
-    height: 100%;
-    justify-content: space-around; }
-  .form2 .toggleswitch .switch {
-    width: 18px;
-    height: 18px;
-    border: 3px solid orange;
-    display: block;
-    border-radius: 20px;
-    background: white;
-    cursor: pointer;
-    margin-right: 5px;
-    position: absolute;
-    top: 11px;
-    right: 5px; }
 .form2 .row {
   width: 100%;
   display: flex;
@@ -355,8 +342,40 @@ Tertiary Main
   justify-content: center; }
   .form2 .row h3 {
     margin-right: auto; }
-.form2 button {
-  height: 35%;
+  .form2 .row .toggleswitch {
+    position: relative;
+    width: 90px; }
+    .form2 .row .toggleswitch input#notifications,
+    .form2 .row .toggleswitch input#privacy {
+      display: none; }
+    .form2 .row .toggleswitch .checkbox-label {
+      width: 100%;
+      border: 1px solid orange;
+      height: 40px;
+      display: block;
+      background: orange;
+      border-radius: 35px;
+      overflow: hidden; }
+    .form2 .row .toggleswitch .innerswitch {
+      display: flex;
+      align-items: center;
+      width: 200%;
+      height: 100%;
+      justify-content: space-around; }
+    .form2 .row .toggleswitch .switch {
+      width: 18px;
+      height: 18px;
+      border: 3px solid orange;
+      display: block;
+      border-radius: 20px;
+      background: white;
+      cursor: pointer;
+      margin-right: 5px;
+      position: absolute;
+      top: 11px;
+      right: 5px; }
+.form2 input[type=submit] {
+  height: 60px;
   width: 45%;
   margin: 10px; }
 .form2 select {
@@ -366,9 +385,6 @@ Tertiary Main
   height: calc(100% / 12 * 2 );
   -webkit-appearance: none;
   background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) lightgray; }
-.form2 input#notifications,
-.form2 input#privacy {
-  display: none; }
 
 .toggleswitch:hover {
   cursor: pointer; }
@@ -432,7 +448,7 @@ Charts
       color: white; }
 
 .lineChart {
-  height: 60%;
+  height: 100%;
   display: flex;
   justify-content: center; }
 
@@ -440,21 +456,38 @@ Charts
   display: flex;
   justify-content: center;
   border-top: 1px solid black;
-  border-bottom: 1px solid black; }
-  .smaller-graphs .pieChart,
-  .smaller-graphs .barChart {
-    width: 50% !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    align-items: center; }
-  .smaller-graphs .barChart {
-    border-right: .5px solid black; }
-  .smaller-graphs .graph-header {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%; }
+  border-bottom: 1px solid black;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .smaller-graphs {
+      flex-direction: row; } }
+
+.pieChart,
+.barChart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  width: 90% !important;
+  min-height: 90%; }
+  @media (min-width: 768px) {
+    .pieChart,
+    .barChart {
+      width: 50% !important;
+      height: 60%; } }
+
+.barChart {
+  border-bottom: .5px solid black; }
+  @media (min-width: 768px) {
+    .barChart {
+      border-right: .5px solid black; } }
+
+.graph-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-self: flex-start; }
 
 /**********************************************************************************
 Charts
@@ -469,18 +502,30 @@ Charts
   .social-media .stats {
     display: flex;
     width: 100%;
+    flex-direction: column;
     padding: 0 2.5em; }
+    @media (min-width: 768px) {
+      .social-media .stats {
+        flex-direction: row; } }
   .social-media .google,
   .social-media .facebook,
   .social-media .twitter {
     background: black;
-    width: 33%;
     display: flex;
-    margin: 0 45px 0px 0;
+    flex-direction: column;
+    margin: 15px 0;
+    width: 100%;
     align-items: center;
     border: 1px solid black;
     padding: 20px;
     border-radius: 10px; }
+    @media (min-width: 768px) {
+      .social-media .google,
+      .social-media .facebook,
+      .social-media .twitter {
+        flex-direction: row;
+        margin: 0 45px 0px 0;
+        width: 33%; } }
     .social-media .google .google,
     .social-media .facebook .google,
     .social-media .twitter .google {

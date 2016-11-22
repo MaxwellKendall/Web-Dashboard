@@ -30,7 +30,7 @@ var lineChart = new Chart(traffic, {
         responsive: true,
         maintainAspectRatio: true,
         legend: {
-            display: true,
+            display: false,
         },
         scales: {
             yAxes: [{
@@ -77,6 +77,9 @@ var barChart = new Chart(dailyTraffic, {
                     beginAtZero:true
                 }
             }]
+        },
+        legend: {
+            display: false
         }
     }
 });
@@ -117,6 +120,9 @@ var pieChart = new Chart(mobileUsers, {
                     beginAtZero:true
                 }
             }]
+        },
+        legend: {
+            display: false
         }
     }
 });
