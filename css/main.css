@@ -5,8 +5,7 @@ h1 {
   font-size: 18px; }
 
 h2 {
-  font-size: 16.8px;
-  text-align: center; }
+  font-size: 16.8px; }
 
 h3 {
   font-size: 15.6px; }
@@ -39,6 +38,11 @@ Body Styles
   margin: 0;
   padding: 0;
   position: relative; }
+  .container h2 {
+    text-align: center; }
+    @media (min-width: 768px) {
+      .container h2 {
+        text-align: left; } }
   .container .main {
     margin-left: 80px; }
   .container a {
@@ -55,7 +59,7 @@ header {
   align-items: center;
   flex-direction: row;
   height: 5.438em;
-  background: black;
+  background: #03A9F4;
   justify-content: flex-start; }
   header h1 {
     margin-left: .5em;
@@ -102,7 +106,7 @@ header li:nth-of-type(1) {
     Navigation SVG's : "Members, Visits..." Blah Blah Blah!
 ***********************************************************************************/
 .navigation {
-  background: orange;
+  background: #0288D1;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -122,7 +126,7 @@ header li:nth-of-type(1) {
     width: 100%;
     min-width: 80px; }
     .navigation ul li {
-      margin: 1em;
+      margin: 1em 0em;
       width: 100%;
       padding: .75em;
       height: 50%; }
@@ -164,7 +168,7 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
     background: #f6f6f6; }
   .dashboard input[type=text] {
     border: 1px solid #dbdbdb;
-    width: 10em;
+    min-width: 10em;
     height: 45%;
     border-radius: 5px;
     margin-right: 10px;
@@ -187,12 +191,14 @@ input[type=text]:focus {
   display: flex;
   margin: 15px auto;
   text-align: center;
-  background: orange;
+  background: #448AFF;
   width: 90%;
   border-radius: 5px;
   justify-content: space-between;
   padding: 9px;
   color: white; }
+  .alert span {
+    color: white; }
 
 .alert span:nth-child(1),
 span:nth-child(3) {
@@ -210,7 +216,7 @@ New Members, Recent Activitiy "Secondary-main"
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid #BDBDBD; }
   @media (min-width: 768px) {
     .secondary-main {
       flex-direction: row; } }
@@ -218,18 +224,17 @@ New Members, Recent Activitiy "Secondary-main"
 .new-members {
   width: 100%;
   flex-direction: column;
-  padding: 2.5% 2.5% 0 0; }
+  padding: 2.5% 0 0 2.5%; }
   @media (min-width: 768px) {
     .new-members {
-      border-right: 1px solid black;
+      border-right: 1px solid #BDBDBD;
       width: 45%; } }
   .new-members .member {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0;
-    padding-bottom: 12px;
-    border-bottom: solid black; }
+    padding: 0 5px 12px 0;
+    border-bottom: 1px solid #BDBDBD; }
     .new-members .member li {
       display: flex;
       height: 35px; }
@@ -261,7 +266,7 @@ New Members, Recent Activitiy "Secondary-main"
     justify-content: flex-start;
     padding: 0;
     padding-bottom: 12px;
-    border-bottom: solid black; }
+    border-bottom: 1px solid #BDBDBD; }
     .recent-activity ul.member-activity li {
       height: 35px; }
     .recent-activity ul.member-activity p {
@@ -303,7 +308,8 @@ Tertiary Main
     flex-direction: column;
     padding: 0 20%;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 2em; }
     @media (min-width: 768px) {
       .tertiary-main .message-user,
       .tertiary-main .settings {
@@ -436,7 +442,8 @@ span.innerswitch:after {
 
 input[type="text"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  text-indent: .5em; }
+  text-indent: .5em;
+  font-size: 14px; }
 
 input[type="text"]:focus,
 textarea:focus {
@@ -471,13 +478,19 @@ Charts
         margin-right: 15px;
         flex-direction: row; } }
     .traffic ul li {
-      margin: 5px; }
-    .traffic ul button {
-      border: none;
-      background: orange;
-      border-radius: 25px;
-      width: 75px;
-      color: white; }
+      margin: 5px;
+      border: 2px solid #0288D1;
+      background: #B3E5FC;
+      padding: 10px;
+      display: flex;
+      width: 4em;
+      border-radius: 5px;
+      justify-content: center;
+      align-items: center;
+      transition: transform .5s, background 2s; }
+    .traffic ul a {
+      color: #757575;
+      font-size: 12px; }
 
 .lineChart {
   height: 100%;
@@ -525,6 +538,12 @@ Charts
       align-self: flex-start;
       padding-left: 1em; } }
 
+.traffic li:hover {
+  transform: scale(1.05);
+  background: #448AFF; }
+  .traffic li:hover a {
+    color: white; }
+
 /**********************************************************************************
 Charts
 ***********************************************************************************/
@@ -546,7 +565,7 @@ Charts
   .social-media .google,
   .social-media .facebook,
   .social-media .twitter {
-    background: black;
+    background: #0288D1;
     display: flex;
     flex-direction: column;
     margin: 15px 0;
@@ -570,7 +589,7 @@ Charts
     .social-media .google .svg-container,
     .social-media .facebook .svg-container,
     .social-media .twitter .svg-container {
-      background: orange;
+      background: #B3E5FC;
       display: flex;
       justify-content: center;
       align-items: center;
