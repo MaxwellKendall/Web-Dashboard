@@ -22,7 +22,7 @@ h3,
 h4,
 span,
 p {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Libre Baskerville", serif; }
 
 * {
   box-sizing: border-box; }
@@ -79,7 +79,7 @@ header {
       header ul li .alert-icon {
         width: 10px;
         height: 10px;
-        background: orange;
+        background: white;
         border-radius: 5px;
         position: absolute;
         bottom: 22.4px;
@@ -228,7 +228,8 @@ New Members, Recent Activitiy "Secondary-main"
   @media (min-width: 768px) {
     .new-members {
       border-right: 1px solid #BDBDBD;
-      width: 45%; } }
+      width: 45%;
+      padding-right: 2.5%; } }
   .new-members .member {
     display: flex;
     flex-direction: row;
@@ -349,9 +350,10 @@ Tertiary Main
   height: 4em;
   width: 100%;
   margin-top: auto;
-  background: orange;
+  background: #0288D1;
   border-radius: 5px;
-  border: none; }
+  border: none;
+  color: white; }
 
 .form2 .row {
   width: 100%;
@@ -371,10 +373,10 @@ Tertiary Main
       display: none; }
     .form2 .row .toggleswitch .checkbox-label {
       width: 100%;
-      border: 1px solid orange;
+      border: 1px solid #0288D1;
       height: 40px;
       display: block;
-      background: orange;
+      background: #0288D1;
       border-radius: 35px;
       overflow: hidden; }
     .form2 .row .toggleswitch .innerswitch {
@@ -386,7 +388,7 @@ Tertiary Main
     .form2 .row .toggleswitch .switch {
       width: 18px;
       height: 18px;
-      border: 3px solid orange;
+      border: 3px solid #0288D1;
       display: block;
       border-radius: 20px;
       background: white;
@@ -401,15 +403,17 @@ Tertiary Main
   width: 95%;
   height: calc(100% / 12 * 2 );
   -webkit-appearance: none;
-  background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) lightgray; }
+  background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) #BBDEFB;
+  text-indent: 1em; }
 .form2 input[type=submit] {
   height: 4em;
   -webkit-appearance: none;
   margin: auto auto 0 auto;
   width: 45%;
   border-radius: 5px;
-  background: orange;
-  border: none; }
+  background: #0288D1;
+  border: none;
+  color: white; }
 
 .toggleswitch:hover {
   cursor: pointer; }
@@ -484,7 +488,7 @@ Charts
       padding: 10px;
       display: flex;
       width: 4em;
-      border-radius: 5px;
+      border-radius: 35px;
       justify-content: center;
       align-items: center;
       transition: transform .5s, background 2s; }
@@ -500,12 +504,16 @@ Charts
 .smaller-graphs {
   display: flex;
   justify-content: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: .5px solid black;
+  border-bottom: .5px solid black;
   flex-direction: column; }
   @media (min-width: 768px) {
     .smaller-graphs {
       flex-direction: row; } }
+
+@media (min-width: 768px) {
+  canvas#pie {
+    border-left: .5px solid black; } }
 
 .pieChart,
 .barChart {
@@ -522,12 +530,6 @@ Charts
       height: 60%;
       justify-content: flex-start; } }
 
-.barChart {
-  border-bottom: .5px solid black; }
-  @media (min-width: 768px) {
-    .barChart {
-      border-right: .5px solid black; } }
-
 .graph-header {
   display: flex;
   width: 100%;
@@ -537,6 +539,10 @@ Charts
       justify-content: flex-start;
       align-self: flex-start;
       padding-left: 1em; } }
+
+@media (min-width: 768px) {
+  .mobileusers {
+    border-left: .5px solid black; } }
 
 .traffic li:hover {
   transform: scale(1.05);
