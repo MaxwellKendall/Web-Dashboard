@@ -134,7 +134,7 @@ header li:nth-of-type(1) {
         width: 65%; }
 
 .navigation ul li:hover {
-  border-left: 3px solid red; }
+  border-left: 3px solid white; }
 
 /**********************************************************************************
 Dashbaord & Alert: "Dashboard, search [       ]; alert...."
@@ -142,8 +142,7 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
 .dashboard {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  background: lightgray; }
+  align-items: center; }
   .dashboard .dashboard-header {
     width: calc(100% / 12 * 1.5);
     display: flex;
@@ -456,6 +455,15 @@ textarea:focus {
 /**********************************************************************************
 Charts
 ***********************************************************************************/
+#line {
+  padding: 50px; }
+
+#bar, #pie {
+  padding: 10px; }
+
+#pie {
+  padding-bottom: 25px; }
+
 .traffic {
   display: flex;
   flex-direction: column;
@@ -483,8 +491,8 @@ Charts
         flex-direction: row; } }
     .traffic ul li {
       margin: 5px;
-      border: 2px solid #0288D1;
-      background: #B3E5FC;
+      border: 2px solid #B3E5FC;
+      background: #0288D1;
       padding: 10px;
       display: flex;
       width: 4em;
@@ -493,7 +501,7 @@ Charts
       align-items: center;
       transition: transform .5s, background 2s; }
     .traffic ul a {
-      color: #757575;
+      color: white;
       font-size: 12px; }
 
 .lineChart {
@@ -521,12 +529,12 @@ Charts
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100% !important;
+  width: 100%;
   min-height: 90%; }
   @media (min-width: 768px) {
     .pieChart,
     .barChart {
-      width: 50% !important;
+      width: 50%;
       height: 60%;
       justify-content: flex-start; } }
 
@@ -548,7 +556,8 @@ Charts
   transform: scale(1.05);
   background: #448AFF; }
   .traffic li:hover a {
-    color: white; }
+    color: white;
+    font-weight: bold; }
 
 /**********************************************************************************
 Charts
