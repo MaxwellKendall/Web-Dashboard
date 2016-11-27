@@ -4,17 +4,17 @@ var alertIcon = document.getElementsByClassName('alert-icon')[0];
 alertIcon.addEventListener('click', addAlert);
 var alertElement = document.getElementsByClassName("alert");
 document.getElementsByTagName('header')[0].addEventListener("mouseover", closeAlert);
+document.getElementsByClassName('alert')[0].addEventListener("mouseover", closeAlert);
 //Add Alert function
 
 function addAlert(){
     console.log(x);
-        var x = document.getElementsByClassName("alert")[0];
+        var x = document.getElementsByClassName("dashboard")[0];
         var y = document.createElement("div");
         y.setAttribute("class", "alert");
         y.innerHTML = "<span>Alert</span><span>This is the Notification</span><span><img src=\' icons/close.svg \'</span>";
         x.insertAdjacentElement("afterend", y);
 }
-
 
 function closeAlert(){
 for(var i = 0; i < alertElement.length; i ++) {
@@ -22,7 +22,7 @@ for(var i = 0; i < alertElement.length; i ++) {
     var exitButton = alertElement[i].lastElementChild;
     exitButton.addEventListener('click', function(){
         console.log('its working');
-        this.parentElement.style.display = "none";
+        this.parentElement.remove();
         });
     }
 }
@@ -37,7 +37,25 @@ Chart.defaults.global.layout = {
         right: 10
     }
 }
+
+// Simulating confirmation message of submitting message
+
+var submit = document.getElementById('sendmessage');
+submit.addEventListener('click', displaySuccessMessage);
+
+function displaySuccessMessage(){
+    event.preventDefault();
+    console.log('displaySuccessMessage');
+    var success = document.createElement("div");
+    success.setAttribute("class", "successmessage");
+    success.innerHTML = "<h1>You're Message will be sent to the user</h1>";
+    var container = document.getElementsByClassName('container')[0];
+    container.insertAdjacentElement("afterbegin", success);
+    debugger;
+}
+
 // variables for line chart
+
 var weekly = {
         labels: ["S", "M", "T", "W", "TH", "F", "S"],
         datasets: [{
@@ -57,8 +75,6 @@ var weekly = {
             pointBackgroundColor: 'white'
             }]
 }
-
-
 
 var lineChart = new Chart(traffic, {
     type: 'line',

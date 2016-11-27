@@ -17,12 +17,16 @@ p, span {
   font-size: 12px; }
 
 h1,
-h2,
+h2 {
+  font-family: "Libre Baskerville", serif;
+  color: #212121; }
+
 h3,
 h4,
 span,
 p {
-  font-family: "Libre Baskerville", serif; }
+  font-family: "Libre Baskerville", serif;
+  color: #757575; }
 
 * {
   box-sizing: border-box; }
@@ -40,7 +44,7 @@ Body Styles
   position: relative; }
   .container h2 {
     text-align: center; }
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .container h2 {
         text-align: left; } }
   .container .main {
@@ -144,18 +148,25 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
   justify-content: flex-start;
   align-items: center; }
   .dashboard .dashboard-header {
-    width: calc(100% / 12 * 1.5);
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: white;
     border-right: 1px solid #dbdbdb;
-    padding: 0 100px; }
+    height: 59px; }
+    @media (min-width: 800px) {
+      .dashboard .dashboard-header {
+        width: calc(100% / 12 * 1.5);
+        padding: 0 100px; } }
   .dashboard h1 {
     padding: .5em;
     margin: 0;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold; }
+    @media (min-width: 800px) {
+      .dashboard h1 {
+        font-size: 20px; } }
   .dashboard .search {
     height: 59px;
     display: flex;
@@ -174,7 +185,7 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
     background: url(../icons/search.svg) no-repeat calc(100% - 5px) 50%;
     background-size: 15px;
     background-color: white; }
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .dashboard input[type=text] {
         width: 35%; } }
 
@@ -191,13 +202,20 @@ input[type=text]:focus {
   margin: 15px auto;
   text-align: center;
   background: #448AFF;
+  align-items: center;
   width: 90%;
   border-radius: 5px;
   justify-content: space-between;
-  padding: 9px;
+  padding: 4px;
   color: white; }
+  @media (min-width: 800px) {
+    .alert {
+      padding: 9px; } }
   .alert span {
     color: white; }
+
+.alert img:hover {
+  cursor: pointer; }
 
 .alert span:nth-child(1),
 span:nth-child(3) {
@@ -216,7 +234,7 @@ New Members, Recent Activitiy "Secondary-main"
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #BDBDBD; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .secondary-main {
       flex-direction: row; } }
 
@@ -224,11 +242,11 @@ New Members, Recent Activitiy "Secondary-main"
   width: 100%;
   flex-direction: column;
   padding: 2.5% 0 0 2.5%; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .new-members {
       border-right: 1px solid #BDBDBD;
       width: 45%;
-      padding-right: 2.5%; } }
+      padding: 2.5% 2.5% 0 0; } }
   .new-members .member {
     display: flex;
     flex-direction: row;
@@ -256,7 +274,7 @@ New Members, Recent Activitiy "Secondary-main"
 .recent-activity {
   width: 100%;
   padding: 2.5% 0 0 2.5%; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .recent-activity {
       width: 45%; } }
   .recent-activity ul.member-activity {
@@ -272,7 +290,7 @@ New Members, Recent Activitiy "Secondary-main"
     .recent-activity ul.member-activity p {
       margin: 0; }
   .recent-activity .member-activity img {
-    width: 35px;
+    width: 25px;
     border-radius: 25px; }
 
 .recent-activity li:nth-of-type(3) {
@@ -296,7 +314,7 @@ Tertiary Main
   justify-content: center;
   align-items: center;
   height: 700px; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .tertiary-main {
       flex-direction: row;
       height: 350px; } }
@@ -310,7 +328,7 @@ Tertiary Main
     align-items: center;
     justify-content: center;
     margin-top: 2em; }
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .tertiary-main .message-user,
       .tertiary-main .settings {
         width: 45%;
@@ -321,7 +339,7 @@ Tertiary Main
     .tertiary-main .settings h2 {
       text-align: center;
       align-self: center; }
-      @media (min-width: 768px) {
+      @media (min-width: 800px) {
         .tertiary-main .message-user h2,
         .tertiary-main .settings h2 {
           align-self: flex-start; } }
@@ -445,36 +463,41 @@ span.innerswitch:after {
 
 input[type="text"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  text-indent: .5em;
-  font-size: 14px; }
+  text-indent: 2px;
+  font-size: 12px;
+  color: #757575; }
+
+.form1 input[type="text"]::-webkit-input-placeholder {
+  text-indent: -9px; }
 
 input[type="text"]:focus,
 textarea:focus {
-  text-indent: .5em; }
+  text-indent: 2px; }
 
 /**********************************************************************************
 Charts
 ***********************************************************************************/
 #line {
-  padding: 50px; }
+  padding: 10px; }
 
 #bar, #pie {
   padding: 10px; }
 
 #pie {
-  padding-bottom: 25px; }
+  padding-bottom: 10px; }
 
 .traffic {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
-  @media (min-width: 768px) {
+  justify-content: center;
+  margin-top: 8px; }
+  @media (min-width: 800px) {
     .traffic {
       flex-direction: row;
       justify-content: flex-end; } }
   .traffic h2 {
     margin: auto; }
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .traffic h2 {
         margin-right: auto;
         margin-left: 15px; } }
@@ -484,7 +507,7 @@ Charts
     flex-direction: column;
     justify-content: center;
     padding-left: 0; }
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .traffic ul {
         justify-content: flex-end;
         margin-right: 15px;
@@ -515,11 +538,11 @@ Charts
   border-top: .5px solid black;
   border-bottom: .5px solid black;
   flex-direction: column; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .smaller-graphs {
       flex-direction: row; } }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   canvas#pie {
     border-left: .5px solid black; } }
 
@@ -531,7 +554,7 @@ Charts
   align-items: center;
   width: 100%;
   min-height: 90%; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .pieChart,
     .barChart {
       width: 50%;
@@ -542,13 +565,13 @@ Charts
   display: flex;
   width: 100%;
   justify-content: center; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .graph-header {
       justify-content: flex-start;
       align-self: flex-start;
       padding-left: 1em; } }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .mobileusers {
     border-left: .5px solid black; } }
 
@@ -573,57 +596,73 @@ Charts
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: 0 2.5em; }
-    @media (min-width: 768px) {
-      .social-media .stats {
-        flex-direction: row; } }
-  .social-media .google,
-  .social-media .facebook,
-  .social-media .twitter {
-    background: #0288D1;
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-    width: 100%;
-    align-items: center;
-    border: 1px solid black;
+    padding: 0 2.5em;
     justify-content: center;
-    padding: 20px;
-    border-radius: 10px; }
-    @media (min-width: 768px) {
-      .social-media .google,
-      .social-media .facebook,
-      .social-media .twitter {
+    align-items: center;
+    margin: auto; }
+    @media (min-width: 800px) {
+      .social-media .stats {
         flex-direction: row;
-        margin: 0 45px 0px 0;
-        width: 33%; } }
-    .social-media .google .google,
-    .social-media .facebook .google,
-    .social-media .twitter .google {
-      margin-right: 0; }
-    .social-media .google .svg-container,
-    .social-media .facebook .svg-container,
-    .social-media .twitter .svg-container {
+        flex-wrap: wrap; } }
+    .social-media .stats .google,
+    .social-media .stats .facebook,
+    .social-media .stats .twitter,
+    .social-media .stats .tumblr,
+    .social-media .stats .instagram {
+      background: #0288D1;
+      display: flex;
+      flex-direction: column;
+      margin: 15px 0;
+      width: 50%;
+      min-width: 150px;
+      align-items: center;
+      border: 1px solid black;
+      justify-content: center;
+      padding: 10px;
+      border-radius: 10px; }
+      @media (min-width: 800px) {
+        .social-media .stats .google,
+        .social-media .stats .facebook,
+        .social-media .stats .twitter,
+        .social-media .stats .tumblr,
+        .social-media .stats .instagram {
+          flex-direction: row;
+          margin: 10px 15px 0px 0;
+          min-width: 150px;
+          width: 30%; } }
+    .social-media .stats .google li {
+      min-width: 110px; }
+    .social-media .stats .svg-container {
       background: #B3E5FC;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 15px;
-      width: 25%;
-      border-radius: 50%; }
-      .social-media .google .svg-container img,
-      .social-media .facebook .svg-container img,
-      .social-media .twitter .svg-container img {
+      width: 80px;
+      border-radius: 40px;
+      margin-top: 30px; }
+      @media (min-width: 800px) {
+        .social-media .stats .svg-container {
+          margin-top: 0;
+          width: 70px; } }
+      @media (min-width: 1024px) {
+        .social-media .stats .svg-container {
+          width: 80px; } }
+      .social-media .stats .svg-container img {
         width: 50px; }
-  .social-media ul {
-    margin-left: 0px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .social-media li {
-    color: white;
-    text-align: center; }
+    .social-media .stats ul {
+      margin-left: 0px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      @media (min-width: 800px) {
+        .social-media .stats ul {
+          margin-left: 15px; } }
+      .social-media .stats ul li {
+        color: white;
+        text-align: center; }
 
 .social-media li:nth-of-type(1) {
   font-weight: bold;
