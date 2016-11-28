@@ -9,11 +9,11 @@ document.getElementsByClassName('alert')[0].addEventListener("mouseover", closeA
 
 function addAlert(){
     console.log(x);
-        var x = document.getElementsByClassName("dashboard")[0];
+        var x = document.getElementsByTagName("header")[0];
         var y = document.createElement("div");
         y.setAttribute("class", "alert");
         y.innerHTML = "<span>Alert</span><span>This is the Notification</span><span><img src=\' icons/close.svg \'</span>";
-        x.insertAdjacentElement("afterend", y);
+        x.appendChild(y);
 }
 
 function closeAlert(){
@@ -44,7 +44,6 @@ var submit = document.getElementById('sendmessage');
 submit.addEventListener('click', displaySuccessMessage);
 
 function displaySuccessMessage(){
-    event.preventDefault();
     console.log('displaySuccessMessage');
     var success = document.createElement("div");
     success.setAttribute("class", "successmessage");
