@@ -1,0 +1,15 @@
+/************************************
+Mixin Standards
+*************************************/
+
+@include font-size($font-size);
+@include font-style($font-family);
+
+* {
+    box-sizing: border-box;
+}
+
+    #bell-icon {
+        width: 100%;
+        margin: auto;
+    }

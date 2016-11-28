@@ -1,0 +1,28 @@
+/*******************************************************************************
+Body Styles
+*********************************************************************************/
+
+.container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    h2 {
+        text-align: center;
+        @include media-query($tablet){
+            text-align: left;
+        }
+
+    }
+
+    .main {
+        margin-left: 80px;
+
+    }
+    a {
+    text-decoration: none;
+    }
+    li {
+        list-style-type: none;
+        cursor: pointer;
+    }
+}
