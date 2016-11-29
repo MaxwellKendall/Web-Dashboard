@@ -9,12 +9,14 @@ document.getElementsByClassName('alert')[0].addEventListener("mouseover", closeA
 
 function addAlert(){
     console.log(x);
-        var x = document.getElementsByTagName("header")[0];
+        var x = document.getElementsByClassName("dashboard")[0];
         var y = document.createElement("div");
         y.setAttribute("class", "alert");
         y.innerHTML = "<span>Alert</span><span>This is the Notification</span><span><img src=\' icons/close.svg \'</span>";
-        x.appendChild(y);
+        x.insertAdjacentElement("afterend", y);
 }
+
+//Exiting the Alert
 
 function closeAlert(){
 for(var i = 0; i < alertElement.length; i ++) {
@@ -26,7 +28,6 @@ for(var i = 0; i < alertElement.length; i ++) {
         });
     }
 }
-//Exiting the Alert
 
 var traffic = document.getElementById("line");
 Chart.defaults.global.layout = {
@@ -40,13 +41,13 @@ Chart.defaults.global.layout = {
 
 // Simulating confirmation message of submitting message
 
-var submit = document.getElementById('sendmessage');
-submit.addEventListener('click', displaySuccessMessage);
+var submit = document.getElementsByClassName('form1')[0];
+submit.addEventListener("submit", displaySuccessMessage);
 
 function displaySuccessMessage(){
-    console.log('displaySuccessMessage');
+    console.log('function displaySuccessMessage triggered');
     var success = document.createElement("div");
-    success.setAttribute("class", "successmessage");
+    success.setAttribute("id", "successmessage");
     success.innerHTML = "<h1>You're Message will be sent to the user</h1>";
     var container = document.getElementsByClassName('container')[0];
     container.insertAdjacentElement("afterbegin", success);

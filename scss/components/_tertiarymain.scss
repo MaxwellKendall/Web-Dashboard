@@ -23,7 +23,6 @@ Tertiary Main
         padding: 0 20%;
         align-items: center;
         justify-content: center;
-        margin-top: 2em;
         @include media-query($tablet) {
             width: 45%;
             padding: 0 2.5%;
@@ -180,6 +179,7 @@ span.innerswitch:before {
     text-align: center;
     font-weight: bold;
     font-size: 13.5px;
+    color: white;
 }
 span.innerswitch:before {
     content: "ON";
