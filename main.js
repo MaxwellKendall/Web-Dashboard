@@ -45,14 +45,30 @@ var submit = document.getElementsByClassName('form1')[0];
 submit.addEventListener("submit", displaySuccessMessage);
 
 function displaySuccessMessage(){
+    event.preventDefault();
     console.log('function displaySuccessMessage triggered');
+    // window.alert("form submitted!");
     var success = document.createElement("div");
     success.setAttribute("id", "successmessage");
-    success.innerHTML = "<h1>You're Message will be sent to the user</h1>";
+    success.innerHTML = "<div class='innersuccess'><h1>Your Message will be sent to the user</h1><input id='confirm' type='submit' value='OK'></input><input id='cancel' type='submit' value='Do not Send'></input></div>";
     var container = document.getElementsByClassName('container')[0];
     container.insertAdjacentElement("afterbegin", success);
-    debugger;
+    // removing overlay
+    var cancelbutton = document.getElementById('cancel');
+    cancelbutton.addEventListener('click', removeoverlay);
+
+    var okbutton = document.getElementById('confirm');
+    okbutton.addEventListener('click', removeoverlay);
+
+    function removeoverlay(){
+        console.log('removeoverlay function triggered');
+        var x = document.getElementById('successmessage');
+        x.remove();
+    }
+
 }
+
+
 
 // variables for line chart
 
