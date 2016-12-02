@@ -172,7 +172,7 @@ Tertiary Main
 input#notifications:checked + .checkbox-label .innerswitch,
 input#privacy:checked + .checkbox-label .innerswitch {
     margin-left: -100%;
-    background: white;
+    background: #BBDEFB;
 }
 
 input#notifications:checked + .checkbox-label .switch,
@@ -197,8 +197,11 @@ span.innerswitch:before {
 span.innerswitch:after {
     content: "OFF";
     padding-left: 25%;
+    color: #212121;
 }
-
+.checkbox-label:hover {
+    cursor: pointer;
+}
 // 2 . Placeholder Text:
 
 //    a. input & text Area

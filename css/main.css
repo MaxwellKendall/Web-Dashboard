@@ -446,7 +446,7 @@ Tertiary Main
 input#notifications:checked + .checkbox-label .innerswitch,
 input#privacy:checked + .checkbox-label .innerswitch {
   margin-left: -100%;
-  background: white; }
+  background: #BBDEFB; }
 
 input#notifications:checked + .checkbox-label .switch,
 input#privacy:checked + .checkbox-label .switch {
@@ -468,7 +468,11 @@ span.innerswitch:before {
 
 span.innerswitch:after {
   content: "OFF";
-  padding-left: 25%; }
+  padding-left: 25%;
+  color: #212121; }
+
+.checkbox-label:hover {
+  cursor: pointer; }
 
 input[type="email"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -530,8 +534,7 @@ Charts
         flex-direction: row; } }
     .traffic ul li {
       margin: 5px;
-      border: 2px solid #B3E5FC;
-      background: #0288D1;
+      background: rgba(187, 222, 251, 0.7);
       padding: 10px 20px;
       display: flex;
       width: 95px;
@@ -540,12 +543,12 @@ Charts
       align-items: center;
       transition: transform .5s, background 2s; }
     .traffic ul .selected {
-      border: 2px solid #1976D2;
-      background: rgba(187, 222, 251, 0.7); }
+      border: 2px solid #B3E5FC;
+      background: #0288D1; }
     .traffic ul .selected a {
-      color: #212121; }
+      color: #FFFFFF; }
     .traffic ul a {
-      color: white;
+      color: #212121;
       font-size: 15px; }
       @media (min-width: 800px) {
         .traffic ul a {
@@ -601,7 +604,8 @@ Charts
 
 .traffic li:hover {
   transform: scale(1.05);
-  background: #448AFF; }
+  background: #448AFF;
+  border: 2px solid #B3E5FC; }
   .traffic li:hover a {
     color: white;
     font-weight: bold; }

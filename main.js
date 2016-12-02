@@ -91,26 +91,21 @@ var hourlyData = {
     labels: ["8 AM", "10 AM", "12 PM", "2 PM", "4 PM", "6 PM", "8 PM", "10 PM", "12 AM"],
     datasets: [
         {
-            label: "My First dataset",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            data: [95, 30, 40, 81, 100, 300, 40, 81, 100],
-            spanGaps: false,
+            label: "Hourly Data",
+            backgroundColor: [
+                'rgba(187, 222, 251, 0.5)'
+            ],
+            borderColor: [
+                'rgba(25, 118, 210, 0.5)'
+            ],
+            data: [65, 59, 80, 81],
+            borderWidth: 1,
+            lineTension: 0.05,
+            pointBorderWidth: 3,
+            pointRadius: 6,
+            pointBorderColor: 'rgba(25, 118, 210, 0.5)',
+            pointBackgroundColor: 'white',
+            data: [95, 30, 40, 81, 100, 300, 40, 81, 100]
         }
     ]
 };
@@ -121,26 +116,21 @@ var dailyData = {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     datasets: [
         {
-            label: "My First dataset",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            data: [95, 30, 40, 81, 100, 300, 40],
-            spanGaps: false,
+            label: "Daily Data",
+            backgroundColor: [
+                'rgba(187, 222, 251, 0.5)'
+            ],
+            borderColor: [
+                'rgba(25, 118, 210, 0.5)'
+            ],
+            data: [65, 59, 80, 81],
+            borderWidth: 1,
+            lineTension: 0.05,
+            pointBorderWidth: 3,
+            pointRadius: 6,
+            pointBorderColor: 'rgba(25, 118, 210, 0.5)',
+            pointBackgroundColor: 'white',
+            data: [95, 30, 40, 81, 100, 300, 40]
         }
     ]
 };
@@ -151,28 +141,19 @@ var weeklyData = {
     labels: ["First Week", "Second Week", "Third Week", "Fourth Week"],
     datasets: [
         {
-            label: "My First dataset",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
+            label: "Weekly Traffic",
+            backgroundColor: 'rgba(187, 222, 251, 0.5)',
+            borderColor: 'rgba(25, 118, 210, 0.5)',
             data: [65, 59, 80, 81],
-            spanGaps: false,
+            borderWidth: 1,
+            lineTension: 0.05,
+            pointBorderWidth: 3,
+            pointRadius: 6,
+            pointBorderColor: 'rgba(25, 118, 210, 0.5)',
+            pointBackgroundColor: 'white'
         }
     ]
+
 };
 
 // Monthly
@@ -181,36 +162,26 @@ var monthlyData = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
         {
-            label: "My First dataset",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            data: [65, 59, 80, 81, 56, 55, 40],
-            spanGaps: false,
-        }
-    ]
+            label: 'Monthly Traffic',
+            data: [500, 2200, 1900, 1200, 900, 450, 1333],
+            backgroundColor: 'rgba(187, 222, 251, 0.5)',
+            borderColor: 'rgba(25, 118, 210, 0.5)',
+            borderWidth: 1,
+            lineTension: 0.05,
+            pointBorderWidth: 3,
+            pointRadius: 6,
+            pointBorderColor: 'rgba(25, 118, 210, 0.5)',
+            pointBackgroundColor: 'white'
+            }
+        ]
 };
 
 // Function for rendering Chart:
 
-function renderChart(element, data) {
+function renderChart(element, chartType, data) {
 console.log("renderChart is working")
     var lineChart = new Chart(element, {
-        type: 'line',
+        type: chartType,
         data: data,
         options: {
             responsive: true,
@@ -228,29 +199,40 @@ console.log("renderChart is working")
         }
     });
 }
-renderChart(traffic, monthlyData);
 
-var weekly = document.getElementById("weekly").parentElement;
-var hourly = document.getElementById("hourly").parentElement;
-var daily = document.getElementById("daily").parentElement;
-var monthly = document.getElementById("monthly").parentElement;
+// function to remove class
+
+function traverseSelectedClassOn (element) {
+    var buttonArray = [hourly, daily, weekly, monthly];
+    for (var i = 0; i < buttonArray.length; i ++){
+        buttonArray[i].removeAttribute('class', 'selected');
+        console.log(buttonArray[i]);
+    }
+    element.setAttribute("class", "selected");
+}
+
+renderChart(traffic, "line", monthlyData);
+
+var weekly = document.getElementById("weekly");
+var hourly = document.getElementById("hourly");
+var daily = document.getElementById("daily");
+var monthly = document.getElementById("monthly");
 
 weekly.addEventListener("click", function(){
-    renderChart(traffic, weeklyData);
-    this.parentElement.setAttribute("class", "selected");
+    renderChart(traffic, "line", weeklyData);
+    traverseSelectedClassOn(weekly);
 })
 hourly.addEventListener("click", function(){
-    renderChart(traffic, hourlyData);
-    this.parentElement.setAttribute("class", "selected");
+    renderChart(traffic, "line", hourlyData);
+    traverseSelectedClassOn(hourly);
 })
 daily.addEventListener("click", function(){
-    renderChart(traffic, dailyData);
-
-    this.parentElement.setAttribute("class", "selected");
+    renderChart(traffic, "line", dailyData);
+    traverseSelectedClassOn(daily);
 })
 monthly.addEventListener("click", function(){
-    renderChart(traffic, monthlyData);
-    this.parentElement.setAttribute("class", "selected");
+    renderChart(traffic, "line", monthlyData);
+    traverseSelectedClassOn(monthly);
 })
 
 var dailyTraffic = document.getElementById("bar");
