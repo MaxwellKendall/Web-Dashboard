@@ -7,7 +7,7 @@
 @mixin font-size($font-size) {
 
     h1 {
-        font-size: $font-size * 1.5
+        font-size: $font-size * 1.5;
     }
 
     h2 {
@@ -28,17 +28,18 @@
 }
 
 
-@mixin font-style($font-family) {
+@mixin font-style($header, $other) {
     h1,
     h2,{
-        font-family: $font-family;
+        font-family: $header;
         color: #212121;
     }
     h3,
     h4,
     span,
-    p {
-        font-family: $font-family;
+    p,
+    a {
+        font-family: $other;
         color: #757575;
     }
 }

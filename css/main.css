@@ -2,30 +2,31 @@
 Mixin Standards
 *************************************/
 h1 {
-  font-size: 18px; }
+  font-size: 24px; }
 
 h2 {
-  font-size: 16.8px; }
+  font-size: 22.4px; }
 
 h3 {
-  font-size: 15.6px; }
+  font-size: 20.8px; }
 
 h4 {
-  font-size: 14.4px; }
+  font-size: 19.2px; }
 
 p, span {
-  font-size: 12px; }
+  font-size: 16px; }
 
 h1,
 h2 {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Crimson Text", serif;
   color: #212121; }
 
 h3,
 h4,
 span,
-p {
-  font-family: "Libre Baskerville", serif;
+p,
+a {
+  font-family: "Cormorant Garamond", serif;
   color: #757575; }
 
 * {
@@ -132,8 +133,7 @@ header li:nth-of-type(1) {
     .navigation ul li {
       margin: 1em 0em;
       width: 100%;
-      padding: .75em;
-      height: 50%; }
+      padding: .75em; }
       .navigation ul li img {
         width: 65%; }
 
@@ -317,7 +317,7 @@ Tertiary Main
   @media (min-width: 800px) {
     .tertiary-main {
       flex-direction: row;
-      height: 350px; } }
+      height: 450px; } }
   .tertiary-main .message-user,
   .tertiary-main .settings {
     height: 50%;
@@ -352,24 +352,31 @@ Tertiary Main
     height: 100%;
     flex-wrap: wrap; }
 
-.form1 input[type="text"] {
+.form1 input[type="email"] {
   height: 4em;
   width: 100%;
-  border: 1px solid black;
-  border-radius: 5px; }
+  text-indent: 15px;
+  border-radius: 5px;
+  border: 3px solid rgba(189, 189, 189, 0.4); }
 .form1 textarea {
   height: 16em;
+  font-size: 15px;
   width: 100%;
+  text-indent: 15px;
   margin-top: 1em;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border: 3px solid rgba(189, 189, 189, 0.4); }
 .form1 input[type=submit] {
-  height: 4em;
+  height: 3em;
   width: 100%;
   margin-top: auto;
   background: #0288D1;
   border-radius: 5px;
   border: none;
-  color: white; }
+  color: white;
+  font-size: 15px;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: auto; }
 
 .form2 .row {
   width: 100%;
@@ -422,14 +429,16 @@ Tertiary Main
   background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) #BBDEFB;
   text-indent: 1em; }
 .form2 input[type=submit] {
-  height: 4em;
+  height: 3em;
   -webkit-appearance: none;
   margin: auto auto 0 auto;
   width: 45%;
   border-radius: 5px;
   background: #0288D1;
   border: none;
-  color: white; }
+  color: white;
+  font-size: 15px;
+  font-family: 'Cormorant Garamond', serif; }
 
 .toggleswitch:hover {
   cursor: pointer; }
@@ -461,18 +470,25 @@ span.innerswitch:after {
   content: "OFF";
   padding-left: 25%; }
 
-input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  text-indent: 2px;
-  font-size: 12px;
-  color: #757575; }
+  color: rgba(33, 33, 33, 0.4);
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif; }
 
-.form1 input[type="text"]::-webkit-input-placeholder {
-  text-indent: -9px; }
+textarea:focus,
+input[type="email"]:focus {
+  text-indent: 10px; }
 
-input[type="text"]:focus,
-textarea:focus {
-  text-indent: 2px; }
+input[type="email"]:placeholder-shown,
+textarea:placeholder-shown {
+  background: rgba(189, 189, 189, 0.2);
+  border: 0.5px solid rgba(189, 189, 189, 0.4); }
+
+textarea::-webkit-input-placeholder,
+.form1 input[type="email"]::-webkit-input-placeholder {
+  text-indent: 15px; }
 
 /**********************************************************************************
 Charts
@@ -516,16 +532,24 @@ Charts
       margin: 5px;
       border: 2px solid #B3E5FC;
       background: #0288D1;
-      padding: 10px;
+      padding: 10px 20px;
       display: flex;
-      width: 4em;
+      width: 95px;
       border-radius: 35px;
       justify-content: center;
       align-items: center;
       transition: transform .5s, background 2s; }
+    .traffic ul .selected {
+      border: 2px solid #1976D2;
+      background: rgba(187, 222, 251, 0.7); }
+    .traffic ul .selected a {
+      color: #212121; }
     .traffic ul a {
       color: white;
-      font-size: 12px; }
+      font-size: 15px; }
+      @media (min-width: 800px) {
+        .traffic ul a {
+          font-size: 20px; } }
 
 .lineChart {
   height: 100%;
@@ -691,7 +715,8 @@ div#successmessage {
     border-radius: 50px; }
   div#successmessage h1 {
     color: white;
-    font-size: 50px; }
+    font-size: 20px;
+    margin-bottom: 50px; }
 
 .innersuccess input[type="submit"] {
   -webkit-appearance: none;

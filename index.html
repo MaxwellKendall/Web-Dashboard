@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Crimson+Text|Lobster" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <title>Web Application Dashboard</title>
@@ -57,10 +57,10 @@
             <div class="traffic">
                 <h2>TRAFFIC</h2>
                 <ul>
-                    <li id="hourly"><a href="#">Hourly</a></li>
-                    <li id="daily"><a href="#">Daily</a></li>
-                    <li id="weekly"><a href="#">Weekly</a></li>
-                    <li id="monthly"><a href="#">Monthly</a></li>
+                    <li><a id="hourly" href="#">Hourly</a></li>
+                    <li><a id="daily" href="#">Daily</a></li>
+                    <li><a id="weekly" href="#">Weekly</a></li>
+                    <li class="selected"><a id="monthly" href="#">Monthly</a></li>
                 </ul>
             </div>
             <div class="lineChart">
@@ -242,8 +242,8 @@
             <div class="message-user">
                 <h2>Message User</h2>
                     <form class="form1" action="#" method="post">
-                        <input type="text" placeholder="Search for User" />
-                        <textarea name="Message-to-User" placeholder="Message for User"></textarea>
+                        <input type="email" id="emailinput" placeholder="Search for User" required/>
+                        <textarea name="Message-to-User" placeholder="Message for User" maxlength="500" min="50" rows="1" required ></textarea>
                         <input id="sendmessage" type="submit" value="Send"></input>
                     </form>
             </div>

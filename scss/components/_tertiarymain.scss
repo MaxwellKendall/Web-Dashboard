@@ -10,7 +10,7 @@ Tertiary Main
     height: 700px;
     @include media-query($tablet) {
         flex-direction: row;
-        height: 350px;
+        height: 450px;
 
     }
 
@@ -54,27 +54,34 @@ Tertiary Main
 // Forms
 
     .form1 {
-        input[type="text"] {
+        input[type="email"] {
                 height: 4em;
                 width: 100%;
-                border: 1px solid black;
+                text-indent: 15px;
                 border-radius: 5px;
+                border: 3px solid rgba(189, 189, 189, 0.4);
         }
 
         textarea {
             height: 16em;
+            font-size: 15px;
             width: 100%;
+            text-indent: 15px;
             margin-top: 1em;
             border-radius: 5px;
+            border: 3px solid rgba(189, 189, 189, 0.4);
         }
         input[type=submit] {
-            height: 4em;
+            height: 3em;
             width: 100%;
             margin-top: auto;
             background: #0288D1;
             border-radius: 5px;
             border: none;
             color: white;
+            font-size: 15px;
+            font-family: 'Cormorant Garamond', serif;
+            margin-top: auto;
         }
 }
 
@@ -141,7 +148,7 @@ Tertiary Main
         text-indent: 1em;
     }
     input[type=submit] {
-        height: 4em;
+        height: 3em;
         -webkit-appearance: none;
         margin: auto auto 0 auto;
         width: 45%;
@@ -149,6 +156,8 @@ Tertiary Main
         background: #0288D1;
         border: none;
         color: white;
+        font-size: 15px;
+        font-family: 'Cormorant Garamond', serif;
     }
 }
 
@@ -190,18 +199,31 @@ span.innerswitch:after {
     padding-left: 25%;
 }
 
-// 2 . Placeholder Text
+// 2 . Placeholder Text:
 
-input[type="text"]::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-    text-indent: 2px;
-    font-size: 12px;
-    color: #757575;
-}
-.form1 input[type="text"]::-webkit-input-placeholder {
-    text-indent: -9px;
-}
-input[type="text"]:focus,
-textarea:focus {
-    text-indent: 2px;
-}
+//    a. input & text Area
+
+    input[type="email"]::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        color: rgba(33, 33, 33, 0.4);
+        font-size: 18px;
+        font-style: italic;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    textarea:focus,
+    input[type="email"]:focus {
+        text-indent: 10px;
+    }
+    input[type="email"]:placeholder-shown,
+    textarea:placeholder-shown {
+        background: rgba(189, 189, 189, 0.2);
+        border: .5px solid rgba(189, 189, 189, 0.4);
+    }
+
+// Message User <Textarea> styles
+
+    textarea::-webkit-input-placeholder,
+    .form1 input[type="email"]::-webkit-input-placeholder {
+        text-indent: 15px;
+
+    }

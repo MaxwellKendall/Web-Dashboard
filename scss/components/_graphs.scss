@@ -44,17 +44,28 @@ Charts
             margin: 5px;
             border: 2px solid #B3E5FC;
             background: #0288D1;
-            padding: 10px;
+            padding: 10px 20px;
             display: flex;
-            width: 4em;
+            width: 95px;
             border-radius: 35px;
             justify-content: center;
             align-items: center;
             transition: transform .5s, background 2s;
         }
+
+        .selected {
+            border: 2px solid #1976D2;
+            background: rgba(187, 222, 251, 0.7);
+        }
+        .selected a {
+            color: #212121;
+        }
         a {
             color: white;
-            font-size: 12px;
+            font-size: 15px;
+            @include media-query($tablet){
+                font-size: 20px;
+            }
         }
     }
 }

@@ -18,12 +18,13 @@ div#successmessage {
     }
     h1 {
         color: white;
-        font-size: 50px;
+        font-size: 20px;
+        margin-bottom:50px;
     }
 }
     .innersuccess {
         input[type="submit"] {
-        -webkit-appearance: none;
+            -webkit-appearance: none;
             width: 45%;
             height: 4em;
             display: flex;

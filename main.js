@@ -53,13 +53,13 @@ function displaySuccessMessage(){
     success.innerHTML = "<div class='innersuccess'><h1>Your Message will be sent to the user</h1><input id='confirm' type='submit' value='OK'></input><input id='cancel' type='submit' value='Do not Send'></input></div>";
     var container = document.getElementsByClassName('container')[0];
     container.insertAdjacentElement("afterbegin", success);
+
     // removing overlay
+
     var cancelbutton = document.getElementById('cancel');
     cancelbutton.addEventListener('click', removeoverlay);
-
     var okbutton = document.getElementById('confirm');
     okbutton.addEventListener('click', removeoverlay);
-
     function removeoverlay(){
         console.log('removeoverlay function triggered');
         var x = document.getElementById('successmessage');
@@ -68,55 +68,197 @@ function displaySuccessMessage(){
 
 }
 
+    // Validating Form Fields
 
-
-// variables for line chart
-
-var weekly = {
-        labels: ["S", "M", "T", "W", "TH", "F", "S"],
-        datasets: [{
-            label: 'Traffic',
-            data: [500, 2200, 1900, 1200, 900, 450, 1333],
-            backgroundColor: [
-                'rgba(187, 222, 251, 0.5)'
-            ],
-            borderColor: [
-                'rgba(25, 118, 210, 0.5)'
-            ],
-            borderWidth: 1,
-            lineTension: 0.05,
-            pointBorderWidth: 3,
-            pointRadius: 6,
-            pointBorderColor: 'rgba(25, 118, 210, 0.5)',
-            pointBackgroundColor: 'white'
-            }]
-}
-
-var lineChart = new Chart(traffic, {
-    type: 'line',
-    data: weekly,
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        legend: {
-            display: false,
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        },
+var email = document.getElementById('emailinput');
+email.addEventListener('keyup', function(){
+    if(email.validity.typeMismatch){
+        email.setCustomValidity("Please input a valid email address")
+    } else {
+        email.setCustomValidity("")
     }
-});
+})
+
+
+
+/******************** CHART STUFF ****************************************/
+
+// Line Chart Data Variables: 4 -- hourly, daily, weekly, & monthly
+
+// Hourly
+
+var hourlyData = {
+    labels: ["8 AM", "10 AM", "12 PM", "2 PM", "4 PM", "6 PM", "8 PM", "10 PM", "12 AM"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [95, 30, 40, 81, 100, 300, 40, 81, 100],
+            spanGaps: false,
+        }
+    ]
+};
+
+// Daily:
+
+var dailyData = {
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [95, 30, 40, 81, 100, 300, 40],
+            spanGaps: false,
+        }
+    ]
+};
+
+//Weekly
+
+var weeklyData = {
+    labels: ["First Week", "Second Week", "Third Week", "Fourth Week"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [65, 59, 80, 81],
+            spanGaps: false,
+        }
+    ]
+};
+
+// Monthly
+
+var monthlyData = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [65, 59, 80, 81, 56, 55, 40],
+            spanGaps: false,
+        }
+    ]
+};
+
+// Function for rendering Chart:
+
+function renderChart(element, data) {
+console.log("renderChart is working")
+    var lineChart = new Chart(element, {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            },
+        }
+    });
+}
+renderChart(traffic, monthlyData);
+
+var weekly = document.getElementById("weekly").parentElement;
+var hourly = document.getElementById("hourly").parentElement;
+var daily = document.getElementById("daily").parentElement;
+var monthly = document.getElementById("monthly").parentElement;
+
+weekly.addEventListener("click", function(){
+    renderChart(traffic, weeklyData);
+    this.parentElement.setAttribute("class", "selected");
+})
+hourly.addEventListener("click", function(){
+    renderChart(traffic, hourlyData);
+    this.parentElement.setAttribute("class", "selected");
+})
+daily.addEventListener("click", function(){
+    renderChart(traffic, dailyData);
+
+    this.parentElement.setAttribute("class", "selected");
+})
+monthly.addEventListener("click", function(){
+    renderChart(traffic, monthlyData);
+    this.parentElement.setAttribute("class", "selected");
+})
 
 var dailyTraffic = document.getElementById("bar");
 
 var barChart = new Chart(dailyTraffic, {
     type: 'bar',
     data: {
-        labels: ["S", "M", "T", "W", "TH", "F", "S"],
+        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         datasets: [{
             label: 'Daily Traffic',
             data: [12, 19, 3, 5, 2, 3, 6],
@@ -142,6 +284,9 @@ var barChart = new Chart(dailyTraffic, {
         }]
     },
     options: {
+        tooltip: {
+            enabled: false
+        },
         scales: {
             yAxes: [{
                 ticks: {
