@@ -1,9 +1,0 @@
-today:
-
-Create a responsive web page with the following:
-
-    -- Header with app name, notification icon badge and profile avatar and name.
-    -- SVG Icon based navigation with the following links: Dashboard, Members, Visits, and Settings.
-            NOTE: You only have to build out the main dashboard page, not any of the other pages.
-    -- Main content area where the specific dashboard widgets will go.
-    -- Ensure that the design responds well from mobile (320px), to tablet and desktop screen sizes.
