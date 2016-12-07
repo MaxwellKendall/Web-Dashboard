@@ -1,0 +1,97 @@
+/**********************************************************************************
+Dashbaord & Alert: "Dashboard, search [       ]; alert...."
+***********************************************************************************/
+
+.dashboard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .dashboard-header {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-right: 1px solid #dbdbdb;
+        height: 59px;
+        @include media-query($tablet){
+            width: calc(100% / 12 * 1.5);
+            padding: 0 100px;
+        }
+    }
+    h1 {
+        padding: .5em;
+        margin: 0;
+        font-size: 15px;
+        font-weight: bold;
+        @include media-query($tablet){
+            font-size: 20px;
+        }
+    }
+    .search {
+        height: 59px;
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        border-bottom: 1px solid #dbdbdb;
+        width: 100%;
+        justify-content: flex-end;
+        background: #f6f6f6;
+        }
+    input[type=text] {
+        border: 1px solid #dbdbdb;
+        min-width: 10em;
+        height: 45%;
+        border-radius: 5px;
+        margin-right: 10px;
+        background: url(../icons/search.svg) no-repeat calc(100% - 5px) 50%;
+        background-size: 15px;
+        background-color: white;
+        @include media-query($tablet) {
+            width: 35%;
+        }
+    }
+}
+
+input[type=text]::-webkit-input-placeholder {
+    color: #d3d3d3;
+    padding-left: 2.5%;
+    font-size: 10px;
+}
+
+input[type=text]:focus {
+    text-indent: 2.5%;
+}
+
+.alert {
+        display: flex;
+        margin: 15px auto;
+        text-align: center;
+        background: #448AFF;
+        align-items: center;
+        width: 90%;
+        border-radius: 5px;
+        justify-content: space-between;
+        padding: 4px;
+        color: white;
+        @include media-query($tablet){
+            padding: 9px;
+        }
+        span {
+            color: white;
+        }
+}
+
+.alert img:hover {
+    cursor: pointer;
+}
+
+.alert span:nth-child(1),
+span:nth-child(3){
+    font-weight: bold;
+    font-size: 15px;
+    }
+
+.alert span:nth-child(3){
+    margin-right: 3px;
+}

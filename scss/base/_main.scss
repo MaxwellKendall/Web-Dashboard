@@ -1,0 +1,44 @@
+/*******************************************************************************
+Body Styles
+*********************************************************************************/
+/************************************
+Mixin Standards
+*************************************/
+
+@include font-size($font-size);
+@include font-style($header, $other);
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    h2 {
+        text-align: center;
+        @include media-query($tablet){
+            text-align: left;
+        }
+
+    }
+
+    #bell-icon {
+        width: 100%;
+        margin: auto;
+    }
+
+    .main {
+        margin-left: 80px;
+
+    }
+    a {
+    text-decoration: none;
+    }
+    li {
+        list-style-type: none;
+        cursor: pointer;
+    }
+}
