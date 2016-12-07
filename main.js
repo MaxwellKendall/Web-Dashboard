@@ -104,12 +104,8 @@ var hourlyData = {
     datasets: [
         {
             label: "Hourly Data",
-            backgroundColor: [
-                'rgba(187, 222, 251, 0.5)'
-            ],
-            borderColor: [
-                'rgba(25, 118, 210, 0.5)'
-            ],
+            backgroundColor:'rgba(187, 222, 251, 0.5)',
+            borderColor:'rgba(25, 118, 210, 0.5)',
             data: [65, 59, 80, 81],
             borderWidth: 1,
             lineTension: 0.05,
@@ -129,12 +125,8 @@ var dailyData = {
     datasets: [
         {
             label: "Daily Data",
-            backgroundColor: [
-                'rgba(187, 222, 251, 0.5)'
-            ],
-            borderColor: [
-                'rgba(25, 118, 210, 0.5)'
-            ],
+            backgroundColor: 'rgba(187, 222, 251, 0.5)',
+            borderColor: 'rgba(25, 118, 210, 0.5)',
             data: [65, 59, 80, 81],
             borderWidth: 1,
             lineTension: 0.05,
