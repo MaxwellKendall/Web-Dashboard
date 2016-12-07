@@ -1,3 +1,15 @@
+// autocomplete
+
+var input = document.getElementById('emailinput');
+
+// Awesomplete(input, {
+//     list: ["xyz@yahoo.com"]
+// });
+
+new Awesomplete(input, {
+	list: ["emailaddress@gmail.com", "maxwell.kendall@gmail.com", "john.doe@sparcedge.com", "newmember@sparcedge.com"]
+});
+
 //Clicking the Alert icons
 
 var alertIcon = document.getElementsByClassName('alert-icon')[0];

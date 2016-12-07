@@ -352,12 +352,14 @@ Tertiary Main
     height: 100%;
     flex-wrap: wrap; }
 
-.form1 input[type="email"] {
+.form1 .awesomplete {
+  width: 100%; }
+.form1 #emailinput {
   height: 4em;
   width: 100%;
   text-indent: 15px;
   border-radius: 5px;
-  border: 3px solid rgba(189, 189, 189, 0.4); }
+  border: 0.5px solid rgba(189, 189, 189, 0.4); }
 .form1 textarea {
   height: 16em;
   font-size: 15px;

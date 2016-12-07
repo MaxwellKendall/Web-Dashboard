@@ -4,6 +4,7 @@
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Crimson+Text|Lobster" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="awesomplete.base.css"/>
         <title>Web Application Dashboard</title>
     </head>
     <body class="container">
@@ -242,8 +243,7 @@
             <div class="message-user">
                 <h2>Message User</h2>
                     <form class="form1" action="#" method="post">
-                        <input type="email" id="emailinput" placeholder="Search for User" required/>
-                        <textarea name="Message-to-User" placeholder="Message for User" maxlength="500" min="50" rows="1" required ></textarea>
+                        <input type="email" class="awesomeplete" id="emailinput" placeholder="Search for User" required/>                        <textarea name="Message-to-User" placeholder="Message for User" maxlength="500" min="50" rows="1" required ></textarea>
                         <input id="sendmessage" type="submit" value="Send"></input>
                     </form>
             </div>
@@ -285,6 +285,7 @@
         </div><!-- End of Main Area-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+    <script src="awesomplete.min.js"></script>
     <script src="main.js"></script>
     </body>
 </html>
