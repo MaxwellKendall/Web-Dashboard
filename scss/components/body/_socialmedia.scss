@@ -34,10 +34,13 @@ Charts
             width: 50%;
             min-width: 150px;
             align-items: center;
-            border: 1px solid black;
+            border: 1px solid #BBDEFB;
             justify-content: center;
             padding: 10px;
             border-radius: 10px;
+            -webkit-box-shadow: 2px 2px 2px 0px rgba(187, 222, 251, 0.5);
+            -moz-box-shadow: 2px 2px 2px 0px rgba(187, 222, 251, 0.5);
+            box-shadow: 2px 2px 2px 0px rgba(187, 222, 251, 0.5);
             @include media-query($tablet){
                 flex-direction: row;
                 margin: 10px 15px 0px 0;
