@@ -57,7 +57,7 @@ Tertiary Main
         .awesomplete {
             width: 100%;
         }
-        #emailinput {
+        #userinput {
                 height: 4em;
                 width: 100%;
                 text-indent: 15px;
@@ -149,6 +149,7 @@ Tertiary Main
         -webkit-appearance: none;
         background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) #BBDEFB;
         text-indent: 1em;
+        border: none;
     }
     input[type=submit] {
         height: 3em;
@@ -209,7 +210,7 @@ span.innerswitch:after {
 
 //    a. input & text Area
 
-    input[type="email"]::-webkit-input-placeholder,
+    #userinput::-webkit-input-placeholder,
     textarea::-webkit-input-placeholder {
         color: rgba(33, 33, 33, 0.4);
         font-size: 18px;
@@ -217,19 +218,27 @@ span.innerswitch:after {
         font-family: 'Cormorant Garamond', serif;
     }
     textarea:focus,
-    input[type="email"]:focus {
+    #userinput:focus {
         text-indent: 10px;
+        border: .5px solid #BBDEFB;
+
     }
-    input[type="email"]:placeholder-shown,
+    #userinput:placeholder-shown,
     textarea:placeholder-shown {
         background: rgba(189, 189, 189, 0.2);
         border: .5px solid rgba(189, 189, 189, 0.4);
+    }
+    #userinput:focus,
+    .form1 textarea:focus {
+        -webkit-box-shadow: 2px 4px 2px 0px rgba(189,189,189,1);
+        -moz-box-shadow: 2px 4px 2px 0px rgba(189,189,189,1);
+        box-shadow: .5px .5px .5px 0px rgba(189,189,189,1);
     }
 
 // Message User <Textarea> styles
 
     textarea::-webkit-input-placeholder,
-    .form1 input[type="email"]::-webkit-input-placeholder {
+    #userinput::-webkit-input-placeholder {
         text-indent: 15px;
 
     }

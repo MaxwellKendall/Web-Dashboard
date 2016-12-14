@@ -12,7 +12,11 @@ Mixin Standards
     box-sizing: border-box;
 }
 
-
+input:focus,
+textarea:focus {
+    outline: none;
+    border: .5px solid #BBDEFB;
+}
 .container {
     margin: 0;
     padding: 0;

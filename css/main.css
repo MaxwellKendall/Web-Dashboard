@@ -35,6 +35,11 @@ a {
 * {
   box-sizing: border-box; }
 
+input:focus,
+textarea:focus {
+  outline: none;
+  border: .5px solid #BBDEFB; }
+
 .container {
   margin: 0;
   padding: 0;
@@ -433,7 +438,7 @@ Tertiary Main
 
 .form1 .awesomplete {
   width: 100%; }
-.form1 #emailinput {
+.form1 #userinput {
   height: 4em;
   width: 100%;
   text-indent: 15px;
@@ -508,7 +513,8 @@ Tertiary Main
   height: calc(100% / 12 * 2 );
   -webkit-appearance: none;
   background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) #BBDEFB;
-  text-indent: 1em; }
+  text-indent: 1em;
+  border: none; }
 .form2 input[type=submit] {
   height: 3em;
   -webkit-appearance: none;
@@ -555,7 +561,7 @@ span.innerswitch:after {
 .checkbox-label:hover {
   cursor: pointer; }
 
-input[type="email"]::-webkit-input-placeholder,
+#userinput::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: rgba(33, 33, 33, 0.4);
   font-size: 18px;
@@ -563,17 +569,63 @@ textarea::-webkit-input-placeholder {
   font-family: 'Cormorant Garamond', serif; }
 
 textarea:focus,
-input[type="email"]:focus {
-  text-indent: 10px; }
+#userinput:focus {
+  text-indent: 10px;
+  border: .5px solid #BBDEFB; }
 
-input[type="email"]:placeholder-shown,
+#userinput:placeholder-shown,
 textarea:placeholder-shown {
   background: rgba(189, 189, 189, 0.2);
   border: 0.5px solid rgba(189, 189, 189, 0.4); }
 
+#userinput:focus,
+.form1 textarea:focus {
+  -webkit-box-shadow: 2px 4px 2px 0px #bdbdbd;
+  -moz-box-shadow: 2px 4px 2px 0px #bdbdbd;
+  box-shadow: 0.5px 0.5px 0.5px 0px #bdbdbd; }
+
 textarea::-webkit-input-placeholder,
-.form1 input[type="email"]::-webkit-input-placeholder {
+#userinput::-webkit-input-placeholder {
   text-indent: 15px; }
+
+.awesomplete [hidden] {
+  display: none; }
+
+.awesomplete .visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0); }
+
+.awesomplete {
+  display: inline-block;
+  position: relative; }
+
+.awesomplete > input {
+  display: block; }
+
+.awesomplete > ul {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  min-width: 100%;
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #212121;
+  background: #fff;
+  border: 1px solid rgba(3, 169, 244, 0.5);
+  border-radius: 1px;
+  background: rgba(189, 189, 189, 0.1); }
+
+.awesomplete li {
+  color: #757575;
+  margin: 10px; }
+
+.awesomplete > ul:empty {
+  display: none; }
+
+mark {
+  background: rgba(187, 222, 251, 0.5); }
 
 /**********************************************************************************
 Dashbaord & Alert: "Dashboard, search [       ]; alert...."
@@ -589,7 +641,8 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
     align-items: center;
     background: white;
     border-right: 1px solid #dbdbdb;
-    height: 59px; }
+    height: 59px;
+    padding: 0 65px; }
     @media (min-width: 800px) {
       .dashboard .dashboard-header {
         width: calc(100% / 12 * 1.5);

@@ -1,18 +1,19 @@
 // autocomplete
 
-var input = document.getElementById('emailinput');
+var input = document.getElementById('userinput');
 
 // Awesomplete(input, {
 //     list: ["xyz@yahoo.com"]
 // });
 
 new Awesomplete(input, {
-	list: ["emailaddress@gmail.com", "maxwell.kendall@gmail.com", "john.doe@sparcedge.com", "newmember@sparcedge.com"]
-});
+	list: ["Willetta Weidler", "Mark Mcwilliam", "Tamatha Taft", "Jules Jardin","Erminia Ebert"]
+	}
+);
 
 //Clicking the Alert icons
 
-var alertIcon = document.getElementsByClassName('alert-icon')[0];
+var alertIcon = document.getElementById('bell');
 alertIcon.addEventListener('click', addAlert);
 var alertElement = document.getElementsByClassName("alert");
 document.getElementsByTagName('header')[0].addEventListener("mouseover", closeAlert);
@@ -26,6 +27,10 @@ function addAlert(){
         y.setAttribute("class", "alert");
         y.innerHTML = "<span>Alert</span><span>This is the Notification</span><span><img src=\' icons/close.svg \'</span>";
         x.insertAdjacentElement("afterend", y);
+		if (alertElement.length > 0) {
+			var alertIcon = document.getElementsByClassName("alert-icon")[0];
+			alertIcon.style.visibility = "visible";
+		}
 }
 
 //Exiting the Alert
@@ -34,9 +39,13 @@ function closeAlert(){
 for(var i = 0; i < alertElement.length; i ++) {
     console.log(i);
     var exitButton = alertElement[i].lastElementChild;
+	var alertIcon = document.getElementsByClassName("alert-icon")[0];
     exitButton.addEventListener('click', function(){
         console.log('its working');
         this.parentElement.remove();
+		if (alertElement.length === 0) {
+		alertIcon.style.visibility = "hidden";
+	}
         });
     }
 }
@@ -82,12 +91,12 @@ function displaySuccessMessage(){
 
     // Validating Form Fields
 
-var email = document.getElementById('emailinput');
-email.addEventListener('keyup', function(){
-    if(email.validity.typeMismatch){
-        email.setCustomValidity("Please input a valid email address")
+var user = document.getElementById('userinput');
+user.addEventListener('keyup', function(){
+    if(user.validity.patternMismatch){
+        user.setCustomValidity("Sorry, we could not identify the user. Please choose a valid user")
     } else {
-        email.setCustomValidity("")
+        user.setCustomValidity("")
     }
 })
 

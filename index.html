@@ -5,14 +5,13 @@
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/awesomplete.base.css"/>
         <title>Web Application Dashboard</title>
     </head>
     <body class="container">
         <header>
             <h1>My Web Dashboard</h1>
             <ul>
-                <li><img src="icons/icon-bell.svg" alt="" /><div class="alert-icon"></div></li>
+                <li><img id="bell" src="icons/icon-bell.svg" alt="" /><div class="alert-icon"></div></li>
                 <li><div class="vertical-line"></div></li>
                 <li><a href="#"><img src="icons/face6.jpg" alt="This is the Profile Picture"/></a></li>
                 <li><a href="#"><span>Maxwell Kendall</span></a></li>
@@ -140,8 +139,8 @@
                             <a href=""><img src="icons/face1.jpg" alt="" /></a>
                         </li>
                         <li>
-                            <span>This is my Name</span>
-                            <span>klasjdflk@gmail.com</span>
+                            <span>Willetta Weidle</span>
+                            <span>Willetta.Weidle@gmail.com</span>
                         </li>
                         <li><span>09/11/2001</span></li>
                     </ul>
@@ -150,8 +149,8 @@
                             <a href=""><img src="icons/face2.jpg" alt="" /></a>
                         </li>
                         <li>
-                            <span>This is my Name</span>
-                            <span>klasjdflk@gmail.com</span>
+                            <span>Mark Mcwilliam</span>
+                            <span>Mark.Mcwilliam@gmail.com</span>
                         </li>
                         <li><span>09/11/2001</span></li>
                     </ul>
@@ -160,8 +159,8 @@
                             <a href=""><img src="icons/face3.jpg" alt="" /></a>
                         </li>
                         <li>
-                            <span>This is my Name</span>
-                            <span>klasjdflk@gmail.com</span>
+                            <span>Tamatha Taft</span>
+                            <span>Tamatha.Taft@gmail.com</span>
                         </li>
                         <li><span>09/11/2001</span></li>
                     </ul>
@@ -170,8 +169,8 @@
                             <a href=""><img src="icons/face4.jpg" alt="" /></a>
                         </li>
                         <li>
-                            <span>This is my Name</span>
-                            <span>klasjdflk@gmail.com</span>
+                            <span>Jules Jardin</span>
+                            <span>Jules.Jardin@gmail.com</span>
                         </li>
                         <li><span>09/11/2001</span></li>
                     </ul>
@@ -180,8 +179,8 @@
                             <a href=""><img src="icons/face5.jpg" alt="" /></a>
                         </li>
                         <li>
-                            <span>This is my Name</span>
-                            <span>klasjdflk@gmail.com</span>
+                            <span>Erminia Ebert</span>
+                            <span>Erminia.Ebert@gmail.com</span>
                         </li>
                         <li><span>09/11/2001</span></li>
                     </ul>
@@ -193,7 +192,7 @@
                         <a href=""><img src="icons/face1.jpg" alt="" /></a>
                     </li>
                     <li>
-                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <p><span>Willetta Weidler</span> made a comment on a post</p>
                         <span>1 hour ago</span>
                     </li>
                     <li><img class="icon" src="icons/comment.svg" alt=""/></li>
@@ -203,7 +202,7 @@
                         <a href=""><img src="icons/face2.jpg" alt="" /></a>
                     </li>
                     <li>
-                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <p><span>Mark Mcwilliam</span> made a post</p>
                         <span>1 hour ago</span>
                     </li>
                     <li><img class="icon" src="icons/post.svg" alt=""/></li>
@@ -213,7 +212,7 @@
                         <a href=""><img src="icons/face3.jpg" alt="" /></a>
                     </li>
                     <li>
-                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <p><span>Tamatha Taft</span> did liked a post</p>
                         <span>1 hour ago</span>
                     </li>
                     <li><img class="icon" src="icons/like.svg" alt=""/></li>
@@ -223,7 +222,7 @@
                         <a href=""><img src="icons/face4.jpg" alt="" /></a>
                     </li>
                     <li>
-                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <p><span>Jules Jardin</span> added a new member</p>
                         <span>1 hour ago</span>
                     </li>
                     <li><img class="icon" src="icons/member.svg" alt=""/></li>
@@ -233,7 +232,7 @@
                         <a href=""><img src="icons/face5.jpg" alt="" /></a>
                     </li>
                     <li>
-                        <p><span>Lorem ipsum dolor lorem</span> did this activity</p>
+                        <p><span>Erminia Ebert</span> liked a post</p>
                         <span>1 hour ago</span>
                     </li>
                     <li><img class="icon" src="icons/like.svg" alt=""/></li>
@@ -244,7 +243,9 @@
             <div class="message-user">
                 <h2>Message User</h2>
                     <form class="form1" action="#" method="post">
-                        <input type="email" class="awesomeplete" id="emailinput" placeholder="Search for User" required/>                        <textarea name="Message-to-User" placeholder="Message for User" maxlength="500" rows="1" required ></textarea>
+                        <input class="awesomeplete" id="userinput" placeholder="Search for User" required
+                        pattern="Willetta Weidler"| "Mark Mcwilliam" | "Tamatha Taft" | "Jules Jardin" | "Erminia Ebert"/>
+                        <textarea name="Message-to-User" placeholder="Message for User" maxlength="500" rows="1" required ></textarea>
                         <input id="sendmessage" type="submit" value="Send">
                     </form>
             </div>
