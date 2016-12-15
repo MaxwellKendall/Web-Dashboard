@@ -21,7 +21,9 @@ document.getElementsByClassName('alert')[0].addEventListener("mouseover", closeA
 //Add Alert function
 
 function addAlert(){
-    console.log(x);
+	var alerts = document.getElementsByClassName('alert');
+	console.log(alerts.length);
+	if(alerts.length < 3){
         var x = document.getElementsByClassName("dashboard")[0];
         var y = document.createElement("div");
 		var z = document.createElement("div");
@@ -31,6 +33,9 @@ function addAlert(){
 		z.innerHTML = "<span>Alert</span><span>This is the Second Notification</span><span><img src=\' icons/close.svg \'</span>";
 		x.insertAdjacentElement("afterend", z);
 		x.insertAdjacentElement("afterend", y);
+	} else {
+		console.log(alerts.length);
+	}
 		if (alertElement.length > 0) {
 			var alertIcon = document.getElementsByClassName("alert-icon")[0];
 			alertIcon.style.visibility = "visible";
