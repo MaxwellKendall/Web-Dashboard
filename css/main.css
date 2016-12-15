@@ -198,7 +198,7 @@ New Members, Recent Activitiy "Secondary-main"
 .new-members {
   width: 100%;
   flex-direction: column;
-  padding: 2.5% 0 0 2.5%; }
+  padding: 2.5%; }
   @media (min-width: 800px) {
     .new-members {
       border-right: 1px solid #BDBDBD;
@@ -230,10 +230,11 @@ New Members, Recent Activitiy "Secondary-main"
 
 .recent-activity {
   width: 100%;
-  padding: 2.5% 0 0 2.5%; }
+  padding: 2.5%; }
   @media (min-width: 800px) {
     .recent-activity {
-      width: 45%; } }
+      width: 45%;
+      padding: 2.5% 0 0 2.5%; } }
   .recent-activity ul.member-activity {
     display: flex;
     flex-direction: row;
