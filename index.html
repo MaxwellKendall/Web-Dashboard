@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <title>Web Application Dashboard</title>
@@ -244,8 +244,7 @@
             <div class="message-user">
                 <h2>Message User</h2>
                     <form class="form1" action="#" method="post">
-                        <input class="awesomeplete" id="userinput" placeholder="Search for User" required
-                        pattern="Willetta Weidler | Mark Mcwilliam | Tamatha Taft | Jules Jardin | Erminia Ebert"/>
+                        <input class="awesomeplete" id="userinput" placeholder="Search for User" required pattern="Willetta Weidler | Mark Mcwilliam | Tamatha Taft | Jules Jardin | Erminia Ebert"/>
                         <textarea name="Message-to-User" placeholder="Message for User" maxlength="500" rows="1" required ></textarea>
                         <input id="sendmessage" type="submit" value="Send">
                     </form>
@@ -254,7 +253,9 @@
                 <h2>Settings</h2>
                     <form class="form2" action="index.html" method="post">
                         <div class="row">
-                            <h3>Send Email Notifications</h3>
+                            <div class ="buttonLabel">
+                                <h3>Send Email Notifications</h3>
+                            </div>
                                 <div class="toggleswitch">
                                     <input type="checkbox" id="notifications">
                                         <label class="checkbox-label" for="notifications">
@@ -264,7 +265,9 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <h3>Set Profile to Public</h3>
+                                <div class ="buttonLabel">
+                                    <h3>Set Profile to Public</h3>
+                                </div>
                                     <div class="toggleswitch">
                                         <input id="privacy" type="checkbox">
                                             <label class="checkbox-label" for="privacy">

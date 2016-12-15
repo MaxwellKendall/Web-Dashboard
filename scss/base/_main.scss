@@ -12,6 +12,12 @@ Mixin Standards
     box-sizing: border-box;
 }
 
+html {
+    width: calc(100% + 80px);
+    @include media-query($tablet){
+        width: 100%;
+    }
+}
 input:focus,
 textarea:focus {
     outline: none;

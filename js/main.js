@@ -91,14 +91,14 @@ function displaySuccessMessage(){
 
     // Validating Form Fields
 
+var send = document.getElementById('sendmessage');
 var user = document.getElementById('userinput');
-user.addEventListener('keyup', function(){
-    if(user.validity.patternMismatch){
-        user.setCustomValidity("Sorry, we could not identify the user. Please choose a valid user")
-    } else {
-        user.setCustomValidity("")
-    }
-})
+
+send.addEventListener('click', function(){
+    if(!user.validity.valid){
+		user.setCustomValidity("Sorry, this is a required field. Please input a value!");
+	};
+});
 
 // Setting Local Storage
 

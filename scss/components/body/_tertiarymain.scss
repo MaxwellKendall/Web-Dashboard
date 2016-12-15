@@ -13,7 +13,12 @@ Tertiary Main
         height: 450px;
 
     }
-
+    .settings {
+        margin-top: 150px;
+        @include media-query($tablet) {
+            margin-top: 0;
+        }
+    }
     .message-user,
     .settings {
         height: 50%;
@@ -97,8 +102,9 @@ Tertiary Main
         align-items: center;
         justify-content: flex-start;
         margin: 0;
-        h3 {
+        .buttonLabel {
             margin-right: auto;
+            width: 108px;
         }
     .toggleswitch {
         position: relative;

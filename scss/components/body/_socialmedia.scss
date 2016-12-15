@@ -8,7 +8,9 @@ Charts
     padding-bottom: 45px;
     border-bottom: 1px solid black;
     h2 {
-        margin-left: 2.5em;
+        @include media-query($tablet){
+            padding-left: 5%;
+        }
     }
     .stats {
         display: flex;
