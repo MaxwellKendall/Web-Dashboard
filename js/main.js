@@ -24,9 +24,13 @@ function addAlert(){
     console.log(x);
         var x = document.getElementsByClassName("dashboard")[0];
         var y = document.createElement("div");
+		var z = document.createElement("div");
         y.setAttribute("class", "alert");
+		z.setAttribute("class", "alert");
         y.innerHTML = "<span>Alert</span><span>This is the Notification</span><span><img src=\' icons/close.svg \'</span>";
-        x.insertAdjacentElement("afterend", y);
+		z.innerHTML = "<span>Alert</span><span>This is the Second Notification</span><span><img src=\' icons/close.svg \'</span>";
+		x.insertAdjacentElement("afterend", z);
+		x.insertAdjacentElement("afterend", y);
 		if (alertElement.length > 0) {
 			var alertIcon = document.getElementsByClassName("alert-icon")[0];
 			alertIcon.style.visibility = "visible";
@@ -85,6 +89,8 @@ function displaySuccessMessage(){
         console.log('removeoverlay function triggered');
         var x = document.getElementById('successmessage');
         x.remove();
+		user.value ="";
+		document.getElementById("message-to-user").value = "";
     }
 
 }
@@ -93,11 +99,13 @@ function displaySuccessMessage(){
 
 var send = document.getElementById('sendmessage');
 var user = document.getElementById('userinput');
-
 send.addEventListener('click', function(){
-    if(!user.validity.valid){
-		user.setCustomValidity("Sorry, this is a required field. Please input a value!");
-	};
+	// event.preventDefault();
+	if(user.validity.valid === false){
+		user.setCustomValidity('checkyoself');
+		} else {
+		user.setCustomValidity("");
+	}
 });
 
 // Setting Local Storage
