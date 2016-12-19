@@ -1,25 +1,18 @@
 // autocomplete
-
 var input = document.getElementById('userinput');
-
-// Awesomplete(input, {
-//     list: ["xyz@yahoo.com"]
-// });
-
 new Awesomplete(input, {
 	list: ["Willetta Weidler", "Mark Mcwilliam", "Tamatha Taft", "Jules Jardin","Erminia Ebert"]
 	}
 );
 
 //Clicking the Alert icons
-
 var alertIcon = document.getElementById('bell');
 alertIcon.addEventListener('click', addAlert);
 var alertElement = document.getElementsByClassName("alert");
 document.getElementsByTagName('header')[0].addEventListener("mouseover", closeAlert);
 document.getElementsByClassName('alert')[0].addEventListener("mouseover", closeAlert);
-//Add Alert function
 
+//Add Alert function
 function addAlert(){
 	var alerts = document.getElementsByClassName('alert');
 	console.log(alerts.length);
