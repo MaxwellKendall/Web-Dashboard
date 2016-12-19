@@ -41,7 +41,9 @@ textarea:focus {
     }
 
     .main {
-        margin-left: 80px;
+        @include media-query($tablet){
+            margin-left: 80px;
+        }
 
     }
     a {

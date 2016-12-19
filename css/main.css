@@ -58,8 +58,9 @@ textarea:focus {
   .container #bell-icon {
     width: 100%;
     margin: auto; }
-  .container .main {
-    margin-left: 80px; }
+  @media (min-width: 800px) {
+    .container .main {
+      margin-left: 80px; } }
   .container a {
     text-decoration: none; }
   .container li {
@@ -733,15 +734,22 @@ span:nth-child(3) {
 ***********************************************************************************/
 .navigation {
   background: #0288D1;
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  top: 87px;
-  width: 80px;
-  height: 100%;
-  min-height: 100vh; }
+  align-items: center; }
+  @media (min-width: 800px) {
+    .navigation {
+      background: #0288D1;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      top: 87px;
+      width: 80px;
+      height: 100%;
+      min-height: 100vh; } }
   .navigation ul {
     display: flex;
     padding-left: 0;
