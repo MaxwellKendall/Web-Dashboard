@@ -2,7 +2,7 @@
 
 div#successmessage {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     background: rgba(33, 33, 33, 0.5);
     width: 100%;
     z-index: 3;
@@ -46,4 +46,64 @@ div#successmessage {
     transition: background-color .5s ease-in, border .5s ease-in;
 }
 
-//
+// Mobile Navigation overlay
+
+#menu {
+    position: fixed;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.5);
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .innerMenu {
+        background: rgba(3, 169, 244, 0.8);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        width: 90%;
+        height: 75%;
+    }
+    .ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-icon {
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .icon {
+        width: 35%;
+        margin: 15px;
+    }
+}
+
+.desktop-nav li:hover {
+    border-left: 3px solid white;
+}
+
+.icon:hover {
+    flex-grow: 1.5;
+}
+
+.close img {
+    position: absolute;
+    top: 15px;
+    width: 55px;
+    right: 15px;
+    cursor: pointer;
+}
+#close:hover {
+    cursor: pointer;
+}

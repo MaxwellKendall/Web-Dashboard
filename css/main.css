@@ -360,7 +360,7 @@ Charts
 
 div#successmessage {
   position: fixed;
-  height: 100vh;
+  height: 100%;
   background: rgba(33, 33, 33, 0.5);
   width: 100%;
   z-index: 3;
@@ -397,6 +397,57 @@ div#successmessage {
   background-color: #1976D2;
   border: 3px solid #BBDEFB;
   transition: background-color .5s ease-in, border .5s ease-in; }
+
+#menu {
+  position: fixed;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.5);
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #menu .innerMenu {
+    background: rgba(3, 169, 244, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 90%;
+    height: 75%; }
+  #menu .ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #menu .nav-icon {
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+  #menu .icon {
+    width: 35%;
+    margin: 15px; }
+
+.desktop-nav li:hover {
+  border-left: 3px solid white; }
+
+.icon:hover {
+  flex-grow: 1.5; }
+
+.close img {
+  position: absolute;
+  top: 15px;
+  width: 55px;
+  right: 15px;
+  cursor: pointer; }
+
+#close:hover {
+  cursor: pointer; }
 
 /********************************************************************************
 Tertiary Main
@@ -522,7 +573,7 @@ Tertiary Main
       top: 11px;
       right: 5px; }
 .form2 select {
-  margin: auto auto 0 auto;
+  margin: auto auto 15px auto;
   display: block;
   width: 95%;
   height: calc(100% / 12 * 2 );
@@ -760,14 +811,38 @@ span:nth-child(3) {
     width: 100%;
     min-width: 80px; }
     .navigation ul li {
+      width: 15%;
       margin: 1em 0em;
-      width: 100%;
       padding: .75em; }
-      .navigation ul li img {
-        width: 65%; }
+      @media (min-width: 800px) {
+        .navigation ul li {
+          width: 100%; } }
+      @media (min-width: 800px) {
+        .navigation ul li img {
+          width: 65%; } }
+  .navigation .mobile-nav {
+    background: #03A9F4;
+    margin: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: -6px 0px 5px -4px #212121;
+    -moz-box-shadow: -6px 0px 5px -4px #212121;
+    box-shadow: -6px 0px 5px -4px #212121; }
+    @media (min-width: 800px) {
+      .navigation .mobile-nav {
+        display: none; } }
+    .navigation .mobile-nav li {
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+  .navigation .desktop-nav {
+    display: none; }
+    @media (min-width: 800px) {
+      .navigation .desktop-nav {
+        display: flex; } }
 
-.navigation ul li:hover {
-  border-left: 3px solid white; }
+.mobile-nav li:hover {
+  border-left: none;
+  cursor: cursor; }
 
 /************************************
  Header Styles : "My Web Dashboard.."
