@@ -4,13 +4,13 @@
 
 header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     height: 5.438em;
     background: #03A9F4;
     justify-content: flex-start;
     @include media-query($tablet) {
-        // flex-direction: row;
+        align-items: center;
 }
     h1 {
         margin-left: .5em;

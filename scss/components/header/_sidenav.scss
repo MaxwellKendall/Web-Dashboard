@@ -3,8 +3,8 @@
 ***********************************************************************************/
 
     .navigation {
+        display: none;
         background: #0288D1;
-        display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -43,31 +43,20 @@
             }
         }
     }
+}
     .mobile-nav {
-        background: #03A9F4;
-        margin: 10px;
-        border-radius: 20px;
-        -webkit-box-shadow: -6px 0px 5px -4px rgba(33,33,33,1);
-        -moz-box-shadow: -6px 0px 5px -4px rgba(33,33,33,1);
-        box-shadow: -6px 0px 5px -4px rgba(33,33,33,1);
+        background: black;
+        display: flex;
+        width: 5em;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        z-index: 3;
+        position: fixed;
         @include media-query($tablet){
             display: none;
         }
-        li {
-            width: 100%;
-            display: flex;
-            justify-content: center;
+        ul {
+            padding-left: 0;
         }
     }
-    .desktop-nav {
-        display: none;
-        @include media-query($tablet) {
-            display: flex;
-        }
-    }
-}
-
-.mobile-nav li:hover {
-    border-left: none;
-    cursor: cursor
-}
