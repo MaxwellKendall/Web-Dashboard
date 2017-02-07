@@ -8,7 +8,7 @@ New Members, Recent Activitiy "Secondary-main"
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #BDBDBD;
+    // border-bottom: 1px solid #BDBDBD;
     @include media-query($tablet) {
         flex-direction: row;
     }
@@ -99,5 +99,5 @@ New Members, Recent Activitiy "Secondary-main"
     }
     .new-members ul:last-of-type,
     .recent-activity ul:last-of-type {
-        border-bottom: none;
+        // border-bottom: none;
     }

@@ -2,7 +2,7 @@
 
 	// 1. Mobile Navigation
 
-	var mobileNav = document.getElementById('mobile-icon');
+	var mobileNav = document.getElementById('menu-icon');
 
 	// 2. Awesomplete
 

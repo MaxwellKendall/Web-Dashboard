@@ -13,7 +13,8 @@ Mixin Standards
 }
 
 html {
-    width: calc(100% + 80px);
+    // width: calc(100% + 80px);
+    width: 100%;
     @include media-query($tablet){
         width: 100%;
     }

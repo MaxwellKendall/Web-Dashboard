@@ -36,8 +36,8 @@ a {
   box-sizing: border-box; }
 
 html {
-  width: calc(100% + 80px); }
-  @media (min-width: 800px) {
+  width: 100%; }
+  @media (min-width: 724px) {
     html {
       width: 100%; } }
 
@@ -52,13 +52,13 @@ textarea:focus {
   position: relative; }
   .container h2 {
     text-align: center; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .container h2 {
         text-align: left; } }
   .container #bell-icon {
     width: 100%;
     margin: auto; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .container .main {
       margin-left: 80px; } }
   .container a {
@@ -84,13 +84,13 @@ Charts
   flex-direction: column;
   justify-content: center;
   margin-top: 8px; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .traffic {
       flex-direction: row;
       justify-content: flex-end; } }
   .traffic h2 {
     margin: auto; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .traffic h2 {
         margin-right: auto;
         margin-left: 15px; } }
@@ -100,7 +100,7 @@ Charts
     flex-direction: column;
     justify-content: center;
     padding-left: 0; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .traffic ul {
         justify-content: flex-end;
         margin-right: 15px;
@@ -123,7 +123,7 @@ Charts
     .traffic ul a {
       color: #212121;
       font-size: 15px; }
-      @media (min-width: 800px) {
+      @media (min-width: 724px) {
         .traffic ul a {
           font-size: 20px; } }
 
@@ -138,11 +138,11 @@ Charts
   border-top: .5px solid black;
   border-bottom: .5px solid black;
   flex-direction: column; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .smaller-graphs {
       flex-direction: row; } }
 
-@media (min-width: 800px) {
+@media (min-width: 724px) {
   canvas#pie {
     border-left: .5px solid black; } }
 
@@ -154,7 +154,7 @@ Charts
   align-items: center;
   width: 100%;
   min-height: 90%; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .pieChart,
     .barChart {
       width: 50%;
@@ -165,13 +165,13 @@ Charts
   display: flex;
   width: 100%;
   justify-content: center; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .graph-header {
       justify-content: flex-start;
       align-self: flex-start;
       padding-left: 1em; } }
 
-@media (min-width: 800px) {
+@media (min-width: 724px) {
   .mobileusers {
     border-left: .5px solid black; } }
 
@@ -190,9 +190,8 @@ New Members, Recent Activitiy "Secondary-main"
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #BDBDBD; }
-  @media (min-width: 800px) {
+  align-items: center; }
+  @media (min-width: 724px) {
     .secondary-main {
       flex-direction: row; } }
 
@@ -200,7 +199,7 @@ New Members, Recent Activitiy "Secondary-main"
   width: 100%;
   flex-direction: column;
   padding: 2.5%; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .new-members {
       border-right: 1px solid #BDBDBD;
       width: 45%;
@@ -232,7 +231,7 @@ New Members, Recent Activitiy "Secondary-main"
 .recent-activity {
   width: 100%;
   padding: 2.5%; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .recent-activity {
       width: 45%;
       padding: 2.5% 0 0 2.5%; } }
@@ -260,10 +259,6 @@ New Members, Recent Activitiy "Secondary-main"
   display: flex;
   flex-direction: column; }
 
-.new-members ul:last-of-type,
-.recent-activity ul:last-of-type {
-  border-bottom: none; }
-
 /**********************************************************************************
 Charts
 ***********************************************************************************/
@@ -272,7 +267,7 @@ Charts
   flex-direction: column;
   padding-bottom: 45px;
   border-bottom: 1px solid black; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .social-media h2 {
       padding-left: 5%; } }
   .social-media .stats {
@@ -283,7 +278,7 @@ Charts
     justify-content: center;
     align-items: center;
     margin: auto; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .social-media .stats {
         flex-direction: row;
         flex-wrap: wrap; } }
@@ -306,7 +301,7 @@ Charts
       -webkit-box-shadow: 2px 2px 2px 0px rgba(187, 222, 251, 0.5);
       -moz-box-shadow: 2px 2px 2px 0px rgba(187, 222, 251, 0.5);
       box-shadow: 2px 2px 2px 0px rgba(187, 222, 251, 0.5); }
-      @media (min-width: 800px) {
+      @media (min-width: 724px) {
         .social-media .stats .google,
         .social-media .stats .facebook,
         .social-media .stats .twitter,
@@ -327,7 +322,7 @@ Charts
       width: 80px;
       border-radius: 40px;
       margin-top: 30px; }
-      @media (min-width: 800px) {
+      @media (min-width: 724px) {
         .social-media .stats .svg-container {
           margin-top: 0;
           width: 70px; } }
@@ -343,7 +338,7 @@ Charts
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      @media (min-width: 800px) {
+      @media (min-width: 724px) {
         .social-media .stats ul {
           margin-left: 15px; } }
       .social-media .stats ul li {
@@ -458,13 +453,13 @@ Tertiary Main
   justify-content: center;
   align-items: center;
   height: 700px; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .tertiary-main {
       flex-direction: row;
       height: 450px; } }
   .tertiary-main .settings {
     margin-top: 150px; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .tertiary-main .settings {
         margin-top: 0; } }
   .tertiary-main .message-user,
@@ -476,7 +471,7 @@ Tertiary Main
     padding: 0 20%;
     align-items: center;
     justify-content: center; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .tertiary-main .message-user,
       .tertiary-main .settings {
         width: 45%;
@@ -487,7 +482,7 @@ Tertiary Main
     .tertiary-main .settings h2 {
       text-align: center;
       align-self: center; }
-      @media (min-width: 800px) {
+      @media (min-width: 724px) {
         .tertiary-main .message-user h2,
         .tertiary-main .settings h2 {
           align-self: flex-start; } }
@@ -578,6 +573,7 @@ Tertiary Main
   width: 95%;
   height: calc(100% / 12 * 2 );
   -webkit-appearance: none;
+  -moz-appearance: none;
   background: url(../icons/downarrow.svg) no-repeat calc(100% - 5px) calc(50%) #BBDEFB;
   text-indent: 1em;
   border: none; }
@@ -710,7 +706,7 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
     border-right: 1px solid #dbdbdb;
     height: 59px;
     padding: 0 65px; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .dashboard .dashboard-header {
         width: calc(100% / 12 * 1.5);
         padding: 0 100px; } }
@@ -719,7 +715,7 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
     margin: 0;
     font-size: 15px;
     font-weight: bold; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .dashboard h1 {
         font-size: 20px; } }
   .dashboard .search {
@@ -740,7 +736,7 @@ Dashbaord & Alert: "Dashboard, search [       ]; alert...."
     background: url(../icons/search.svg) no-repeat calc(100% - 5px) 50%;
     background-size: 15px;
     background-color: white; }
-    @media (min-width: 800px) {
+    @media (min-width: 724px) {
       .dashboard input[type=text] {
         width: 35%; } }
 
@@ -763,7 +759,7 @@ input[type=text]:focus {
   justify-content: space-between;
   padding: 4px;
   color: white; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .alert {
       padding: 9px; } }
   .alert span {
@@ -789,7 +785,7 @@ span:nth-child(3) {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .navigation {
       background: #0288D1;
       position: absolute;
@@ -814,10 +810,10 @@ span:nth-child(3) {
       width: 15%;
       margin: 1em 0em;
       padding: .75em; }
-      @media (min-width: 800px) {
+      @media (min-width: 724px) {
         .navigation ul li {
           width: 100%; } }
-      @media (min-width: 800px) {
+      @media (min-width: 724px) {
         .navigation ul li img {
           width: 65%; } }
 
@@ -830,7 +826,7 @@ span:nth-child(3) {
   border-radius: 30px;
   z-index: 3;
   position: fixed; }
-  @media (min-width: 800px) {
+  @media (min-width: 724px) {
     .mobile-nav {
       display: none; } }
   .mobile-nav ul {
@@ -841,29 +837,58 @@ span:nth-child(3) {
 *************************************/
 header {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  height: 5.438em;
+  align-items: center;
+  flex-direction: column;
   background: #03A9F4;
-  justify-content: flex-start; }
-  @media (min-width: 800px) {
+  justify-content: center;
+  background: #03A9F4; }
+  @media (min-width: 724px) {
     header {
-      align-items: center; } }
+      align-items: center;
+      flex-direction: row;
+      height: 5.438em;
+      height: 5.438em;
+      justify-content: flex-start; } }
   header h1 {
-    margin-left: .5em;
-    color: white; }
+    color: white;
+    align-self: flex-start;
+    margin-left: 5px; }
+    @media (min-width: 724px) {
+      header h1 {
+        margin-left: .5em; } }
+  header #menu-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+    @media (min-width: 724px) {
+      header #menu-icon {
+        display: none; } }
+    header #menu-icon img {
+      width: 100%;
+      height: 100%; }
   header ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 20px;
-    margin-left: calc(100% - 400px); }
+    justify-content: center;
+    padding-left: 0px;
+    margin-top: 0px; }
+    @media (min-width: 724px) {
+      header ul {
+        justify-content: flex-start;
+        margin-left: calc(100% - 400px);
+        margin-top: 16px; } }
     header ul li {
       list-style-type: none;
-      width: 30px;
+      width: 35px;
       text-align: center;
-      margin: 0 .5em;
-      height: 30px; }
+      height: 35px;
+      margin: 10px; }
+      @media (min-width: 724px) {
+        header ul li {
+          margin: 0 .5em; } }
       header ul li .alert-icon {
         width: 10px;
         height: 10px;
@@ -885,7 +910,8 @@ header {
 
 header li:nth-of-type(2) {
   width: 2.5px;
-  height: 30px; }
+  height: 35px;
+  display: inline; }
 
 header li:nth-of-type(1) {
   position: relative; }
