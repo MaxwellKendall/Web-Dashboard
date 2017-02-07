@@ -203,6 +203,9 @@ function mobileMenu(){
 		document.getElementById('menu').remove();
 	});
 }
+
+
+
 /******************** CHART STUFF ****************************************/
 
 // Line Chart Data
